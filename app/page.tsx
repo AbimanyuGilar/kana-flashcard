@@ -94,7 +94,7 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export default function KanaQuizApp() {
+export default function GiraNihonggoApp() {
   const [gameState, setGameState] = useState<GameState>('mode_select');
   const [quizMode, setQuizMode] = useState<QuizMode>('single');
   const [selectedKanaType, setSelectedKanaType] = useState<KanaType>('hiragana');
@@ -299,7 +299,7 @@ export default function KanaQuizApp() {
       <header className="max-w-xl mx-auto w-full flex items-center justify-between pb-4">
         <div className="flex items-center gap-2">
           <BookOpen className="text-cyan-400 size-6" />
-          <span className="text-xl font-black tracking-tight">Kana<span className="text-cyan-400">Quiz</span></span>
+          <span className="text-xl font-black tracking-tight">Gira <span className="text-cyan-400">Nihonggo</span></span>
         </div>
         {gameState !== 'mode_select' && (
           <button
@@ -708,7 +708,7 @@ export default function KanaQuizApp() {
       )}
 
       <footer className="text-center text-xs text-slate-600 py-2">
-        KanaQuiz App • Built with Next.js & Gemini API
+        Gira Nihonggo • Built with Next.js & Gemini API
       </footer>
     </div>
   );
