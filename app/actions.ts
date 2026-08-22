@@ -78,7 +78,7 @@ Ketentuan:
 1. Gunakan ${type === 'hiragana' ? 'Hiragana penuh (tanpa Kanji)' : 'Katakana penuh'}.
 2. Sertakan cara baca dalam Romaji (gunakan huruf kecil semua, pisahkan tiap kata dengan spasi/strip bila perlu, tanpa tanda baca khusus).
 3. Sertakan terjemahan bahasa Indonesia singkat.
-4. Jangan gunakan kalimat yang terlalu umum/template`;
+4. Jangan gunakan kalimat yang umum/template, supaya bervariasi tiap request.`;
 
     const response = await ai.models.generateContent({
       model: process.env.GEMINI_MODEL as string,
