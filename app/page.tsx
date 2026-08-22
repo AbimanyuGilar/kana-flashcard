@@ -708,7 +708,7 @@ export default function GiraNihonggoApp() {
       )}
 
       <footer className="text-center text-xs text-slate-600 py-2">
-        Gira Nihonggo • Built with Next.js & Gemini API
+        Gira Nihonggo • Built with Next.js
       </footer>
     </div>
   );
