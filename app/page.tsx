@@ -540,20 +540,6 @@ export default function KanaQuizApp() {
 
           {/* Card Soal Utama */}
           <div className="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[200px] shadow-2xl text-center">
-            <button
-              onClick={(e) =>
-                playAudio(
-                  quizMode === 'single'
-                    ? singleDeck[currentIndex]?.kana
-                    : sentenceDeck[currentIndex]?.sentence,
-                  e
-                )
-              }
-              className="absolute top-4 right-4 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700 text-slate-400 hover:text-white transition"
-            >
-              <Volume2 size={20} />
-            </button>
-
             {quizMode === 'single' ? (
               <div className="text-8xl font-black text-white tracking-wide">
                 {singleDeck[currentIndex]?.kana}
