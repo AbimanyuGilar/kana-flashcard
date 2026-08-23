@@ -82,14 +82,19 @@ export default function KanaQuizApp() {
   const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
   const [isAiFallback, setIsAiFallback] = useState<boolean>(false);
   
-  const [singleOptions, setSingleOptions] = useState<string[]>([]);
+
   const [textInput, setTextInput] = useState<string>('');
   const [sentenceResult, setSentenceResult] = useState<{ isCorrect: boolean; userAns: string } | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const autoNextTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  // Single mode states
+  const [correctCount, setCorrectCount] = useState<number>(0);
+  const [wrongCount, setWrongCount] = useState<number>(0);
+  const [isInputRed, setIsInputRed] = useState<boolean>(false);
+  const [hasMissedCurrentCard, setHasMissedCurrentCard] = useState<boolean>(false);
 
   const [score, setScore] = useState<number>(0);
   const [streak, setStreak] = useState<number>(0);
@@ -105,9 +110,6 @@ export default function KanaQuizApp() {
       .reduce((acc, g) => acc + g.items.length, 0);
   }, [currentGroups, selectedGroupIds]);
 
-  const fullPoolSingle = useMemo(() => {
-    return currentGroups.flatMap((g) => g.items);
-  }, [currentGroups]);
 
   const toggleGroup = (groupId: string) => {
     setSelectedGroupIds((prev) => {
@@ -128,16 +130,25 @@ export default function KanaQuizApp() {
   };
 
   const handleStartQuiz = async () => {
+    if (autoNextTimeoutRef.current) {
+      clearTimeout(autoNextTimeoutRef.current);
+      autoNextTimeoutRef.current = null;
+    }
+
     setIsLoading(true);
     setScore(0);
     setStreak(0);
     setHighestStreak(0);
     setCurrentIndex(0);
     setIsAnswered(false);
-    setSelectedOption(null);
     setTextInput('');
     setSentenceResult(null);
     setIsAiFallback(false);
+    
+    setCorrectCount(0);
+    setWrongCount(0);
+    setIsInputRed(false);
+    setHasMissedCurrentCard(false);
 
     if (quizMode === 'single') {
       let pool: Character[] = [];
@@ -163,59 +174,79 @@ export default function KanaQuizApp() {
     }
   };
 
-  const generateSingleOptions = useCallback(
-    (correctRomaji: string) => {
-      const distractors = fullPoolSingle
-        .filter((item) => item.romaji !== correctRomaji)
-        .map((item) => item.romaji);
-      const uniqueDistractors = Array.from(new Set(distractors));
-      const shuffledDistractors = shuffleArray(uniqueDistractors).slice(0, 3);
-      setSingleOptions(shuffleArray([correctRomaji, ...shuffledDistractors]));
-    },
-    [fullPoolSingle]
-  );
 
-  useEffect(() => {
-    if (gameState === 'playing') {
-      if (quizMode === 'single') {
-        const curr = singleDeck[currentIndex];
-        if (curr) generateSingleOptions(curr.romaji);
-      } else {
-        setTimeout(() => inputRef.current?.focus(), 100);
-      }
-    }
-  }, [gameState, currentIndex, quizMode, singleDeck, generateSingleOptions]);
-
-  const handleSelectSingleOption = (option: string) => {
+  const handleSingleInput = (value: string) => {
     if (isAnswered) return;
 
-    setSelectedOption(option);
-    setIsAnswered(true);
+    if (autoNextTimeoutRef.current) {
+      clearTimeout(autoNextTimeoutRef.current);
+      autoNextTimeoutRef.current = null;
+    }
 
-    const targetRomaji = singleDeck[currentIndex]?.romaji;
-    const isCorrect = option === targetRomaji;
+    const lower = value.toLowerCase().replace(/\s/g, '');
+    const correctRomaji = singleDeck[currentIndex]?.romaji ?? '';
+    setTextInput(lower);
 
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-      setStreak((prev) => {
-        const next = prev + 1;
-        setHighestStreak((h) => Math.max(h, next));
-        return next;
-      });
-    } else {
-      setStreak(0);
+    if (isInputRed) {
+      setIsInputRed(false);
+    }
+
+    if (lower === correctRomaji) {
+      setIsAnswered(true);
+      
+      if (!hasMissedCurrentCard) {
+        setCorrectCount((prev) => prev + 1);
+        setScore((prev) => prev + 1);
+        setStreak((prev) => {
+          const next = prev + 1;
+          setHighestStreak((h) => Math.max(h, next));
+          return next;
+        });
+      }
+      
+      autoNextTimeoutRef.current = setTimeout(() => {
+        handleNextQuestion();
+      }, 150);
+      return;
+    }
+
+    if (lower.length >= correctRomaji.length) {
+      setIsInputRed(true);
+      if (!hasMissedCurrentCard) {
+        setWrongCount((prev) => prev + 1);
+        setHasMissedCurrentCard(true);
+        setStreak(0);
+      }
+      // Auto-next jika salah, beri waktu agak lebih lama (misal 800ms) 
+      // Jika user mulai mengetik, timeout dibatalkan (di atas)
+      autoNextTimeoutRef.current = setTimeout(() => {
+        handleNextQuestion();
+      }, 800);
     }
   };
 
+  useEffect(() => {
+    if (gameState === 'playing') {
+      setTextInput('');
+      setTimeout(() => inputRef.current?.focus(), 80);
+    }
+  }, [gameState, currentIndex]);
+
   const handleNextQuestion = useCallback(() => {
+    if (autoNextTimeoutRef.current) {
+      clearTimeout(autoNextTimeoutRef.current);
+      autoNextTimeoutRef.current = null;
+    }
+
     const totalQuestions = quizMode === 'single' ? singleDeck.length : sentenceDeck.length;
 
     if (currentIndex + 1 < totalQuestions) {
       setCurrentIndex((prev) => prev + 1);
       setIsAnswered(false);
-      setSelectedOption(null);
       setTextInput('');
       setSentenceResult(null);
+      setIsInputRed(false);
+      setHasMissedCurrentCard(false);
     } else {
       setGameState('result');
     }
@@ -556,9 +587,18 @@ export default function KanaQuizApp() {
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-bold text-slate-400 px-1">
               <span>Soal {currentIndex + 1} dari {quizMode === 'single' ? singleDeck.length : sentenceDeck.length}</span>
-              <span className="flex items-center gap-1 text-amber-400">
-                <Flame size={14} /> Streak: {streak}
-              </span>
+              
+              <div className="flex items-center gap-4">
+                {quizMode === 'single' && (
+                  <div className="flex gap-2 text-[10px]">
+                    <span className="text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded-md border border-emerald-900/50">Benar: {correctCount}</span>
+                    <span className="text-rose-400 bg-rose-950/40 px-2 py-0.5 rounded-md border border-rose-900/50">Salah: {wrongCount}</span>
+                  </div>
+                )}
+                <span className="flex items-center gap-1 text-amber-400">
+                  <Flame size={14} /> Streak: {streak}
+                </span>
+              </div>
             </div>
             <div className="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
               <div
@@ -606,38 +646,26 @@ export default function KanaQuizApp() {
 
           {/* Opsi Jawaban */}
           {quizMode === 'single' ? (
-            <div className="grid grid-cols-2 gap-3">
-              {singleOptions.map((option, idx) => {
-                let btnStyle = 'bg-slate-900 border-slate-800 text-slate-200 hover:border-slate-700';
-                const targetRomaji = singleDeck[currentIndex]?.romaji;
-
-                if (isAnswered) {
-                  if (option === targetRomaji) {
-                    btnStyle = 'bg-emerald-950/80 border-emerald-500 text-emerald-200';
-                  } else if (option === selectedOption) {
-                    btnStyle = 'bg-rose-950/80 border-rose-500 text-rose-200';
-                  } else {
-                    btnStyle = 'bg-slate-900/40 border-slate-800/40 text-slate-600';
-                  }
-                }
-
-                return (
-                  <button
-                    key={idx}
-                    disabled={isAnswered}
-                    onClick={() => handleSelectSingleOption(option)}
-                    className={`py-4 px-4 rounded-2xl border text-sm md:text-base font-bold tracking-wider transition-all flex items-center justify-between ${btnStyle}`}
-                  >
-                    <span className="truncate">{option}</span>
-                    {isAnswered && option === targetRomaji && (
-                      <CheckCircle2 size={18} className="text-emerald-400 shrink-0 ml-1" />
-                    )}
-                    {isAnswered && option === selectedOption && option !== targetRomaji && (
-                      <XCircle size={18} className="text-rose-400 shrink-0 ml-1" />
-                    )}
-                  </button>
-                );
-              })}
+            <div className="space-y-3">
+              <input
+                ref={inputRef}
+                type="text"
+                value={textInput}
+                onChange={(e) => handleSingleInput(e.target.value)}
+                disabled={isAnswered}
+                placeholder="Ketik romaji..."
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                className={`w-full py-4 px-5 bg-slate-900 border-2 rounded-2xl text-xl font-bold text-white text-center placeholder-slate-500 focus:outline-none transition-all tracking-widest ${
+                  isInputRed
+                    ? 'border-rose-500 bg-rose-950/20 text-rose-400'
+                    : isAnswered
+                      ? 'border-emerald-500 bg-emerald-950/20 text-emerald-400'
+                      : 'border-slate-800 focus:border-cyan-500'
+                }`}
+              />
             </div>
           ) : (
             <div className="space-y-3">
@@ -690,7 +718,7 @@ export default function KanaQuizApp() {
             </div>
           )}
 
-          {isAnswered && (
+          {isAnswered && quizMode !== 'single' && (
             <button
               onClick={handleNextQuestion}
               className="w-full py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-2xl flex items-center justify-center gap-2 transition shadow-lg text-base animate-in fade-in slide-in-from-bottom-2 duration-200"
