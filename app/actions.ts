@@ -2,7 +2,7 @@
 
 import { GoogleGenAI, Type } from '@google/genai';
 
-type KanaType = 'hiragana' | 'katakana';
+type KanaType = 'hiragana' | 'katakana' | 'both';
 
 export type SentenceQuestion = {
   sentence: string;
@@ -73,11 +73,18 @@ export async function generateSentenceQuiz(
 
     const ai = new GoogleGenAI({ apiKey });
 
-    const prompt = `Buatkan ${count} kalimat atau kata serapan bahasa Jepang sederhana yang unik dan berbeda satu sama lain untuk latihan membaca.
-Ketentuan:
-1. Gunakan ${type === 'hiragana' ? 'Hiragana penuh (tanpa Kanji)' : 'Katakana penuh'}.
-2. Sertakan cara baca dalam Romaji (gunakan huruf kecil semua, pisahkan tiap kata dengan spasi/strip bila perlu, tanpa tanda baca khusus).
-3. Sertakan terjemahan bahasa Indonesia singkat.
+    const scriptInstruction =
+      type === 'hiragana'
+        ? 'Hiragana penuh (tanpa Kanji)'
+        : type === 'katakana'
+          ? 'Katakana penuh'
+          : 'campuran Hiragana dan Katakana (tanpa Kanji, setiap kalimat boleh full Hiragana atau full Katakana atau kombinasi keduanya)';
+
+    const prompt = `Buatkan ${count} kalimat atau kata serapan bahasa Jepang sederhana yang unik dan berbeda satu sama lain untuk latihan membaca.\n
+Ketentuan:\n
+1. Gunakan ${scriptInstruction}.\n
+2. Sertakan cara baca dalam Romaji (gunakan huruf kecil semua, pisahkan tiap kata dengan spasi/strip bila perlu, tanpa tanda baca khusus).\n
+3. Sertakan terjemahan bahasa Indonesia singkat.\n
 4. Jangan gunakan kalimat yang umum/template, supaya bervariasi tiap request.`;
 
     const response = await ai.models.generateContent({
@@ -109,7 +116,12 @@ Ketentuan:
   } catch (error) {
     console.error('Gemini API Error:', error);
 
-    const pool = type === 'hiragana' ? DEFAULT_HIRAGANA : DEFAULT_KATAKANA;
+    const pool =
+      type === 'hiragana'
+        ? DEFAULT_HIRAGANA
+        : type === 'katakana'
+          ? DEFAULT_KATAKANA
+          : [...DEFAULT_HIRAGANA, ...DEFAULT_KATAKANA].sort(() => Math.random() - 0.5);
     const fallbackQuestions = pool.slice(0, Math.min(count, pool.length));
 
     return {

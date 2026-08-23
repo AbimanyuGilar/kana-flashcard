@@ -1,88 +1,59 @@
 'use client';
 
 import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
-import { Volume2, BookOpen, Layers3, Flame, RotateCcw, CheckCircle2, XCircle, Award, Play, ArrowLeft, Type, MessageSquareCode, Loader2, Send, AlertTriangle, X } from 'lucide-react';
+import { Volume2, BookOpen, Flame, RotateCcw, CheckCircle2, XCircle, Award, Play, ArrowLeft, Type, MessageSquareCode, Loader2, Send, AlertTriangle, X, CheckSquare, Square } from 'lucide-react';
 import { generateSentenceQuiz, SentenceQuestion } from './actions';
 
 type Character = { kana: string; romaji: string };
-type KanaCategory = 'gojuon' | 'dakuon' | 'handakuon' | 'yoon';
 type KanaType = 'hiragana' | 'katakana';
+type SentenceKanaType = 'hiragana' | 'katakana' | 'both';
 type QuizMode = 'single' | 'sentence';
 type GameState = 'mode_select' | 'setup' | 'playing' | 'result';
 
-const KANA_MASTER_DATA = {
-  hiragana: {
-    gojuon: [
-      { kana: 'あ', romaji: 'a' }, { kana: 'い', romaji: 'i' }, { kana: 'う', romaji: 'u' }, { kana: 'え', romaji: 'e' }, { kana: 'お', romaji: 'o' },
-      { kana: 'か', romaji: 'ka' }, { kana: 'き', romaji: 'ki' }, { kana: 'く', romaji: 'ku' }, { kana: 'け', romaji: 'ke' }, { kana: 'こ', romaji: 'ko' },
-      { kana: 'さ', romaji: 'sa' }, { kana: 'し', romaji: 'shi' }, { kana: 'す', romaji: 'su' }, { kana: 'せ', romaji: 'se' }, { kana: 'そ', romaji: 'so' },
-      { kana: 'た', romaji: 'ta' }, { kana: 'ち', romaji: 'chi' }, { kana: 'つ', romaji: 'tsu' }, { kana: 'て', romaji: 'te' }, { kana: 'と', romaji: 'to' },
-      { kana: 'な', romaji: 'na' }, { kana: 'に', romaji: 'ni' }, { kana: 'ぬ', romaji: 'nu' }, { kana: 'ね', romaji: 'ne' }, { kana: 'の', romaji: 'no' },
-      { kana: 'は', romaji: 'ha' }, { kana: 'ひ', romaji: 'hi' }, { kana: 'ふ', romaji: 'fu' }, { kana: 'へ', romaji: 'he' }, { kana: 'ほ', romaji: 'ho' },
-      { kana: 'ま', romaji: 'ma' }, { kana: 'み', romaji: 'mi' }, { kana: 'む', romaji: 'mu' }, { kana: 'め', romaji: 'me' }, { kana: 'も', romaji: 'mo' },
-      { kana: 'や', romaji: 'ya' }, { kana: 'ゆ', romaji: 'yu' }, { kana: 'よ', romaji: 'yo' },
-      { kana: 'ら', romaji: 'ra' }, { kana: 'り', romaji: 'ri' }, { kana: 'る', romaji: 'ru' }, { kana: 'れ', romaji: 're' }, { kana: 'ろ', romaji: 'ro' },
-      { kana: 'わ', romaji: 'wa' }, { kana: 'を', romaji: 'wo' }, { kana: 'ん', romaji: 'n' },
-    ],
-    dakuon: [
-      { kana: 'が', romaji: 'ga' }, { kana: 'ぎ', romaji: 'gi' }, { kana: 'ぐ', romaji: 'gu' }, { kana: 'げ', romaji: 'ge' }, { kana: 'ご', romaji: 'go' },
-      { kana: 'ざ', romaji: 'za' }, { kana: 'じ', romaji: 'ji' }, { kana: 'ず', romaji: 'zu' }, { kana: 'ぜ', romaji: 'ze' }, { kana: 'ぞ', romaji: 'zo' },
-      { kana: 'だ', romaji: 'da' }, { kana: 'ぢ', romaji: 'ji' }, { kana: 'づ', romaji: 'zu' }, { kana: 'で', romaji: 'de' }, { kana: 'ど', romaji: 'do' },
-      { kana: 'ば', romaji: 'ba' }, { kana: 'び', romaji: 'bi' }, { kana: 'ぶ', romaji: 'bu' }, { kana: 'べ', romaji: 'be' }, { kana: 'ぼ', romaji: 'bo' },
-    ],
-    handakuon: [
-      { kana: 'ぱ', romaji: 'pa' }, { kana: 'ぴ', romaji: 'pi' }, { kana: 'ぷ', romaji: 'pu' }, { kana: 'ぺ', romaji: 'pe' }, { kana: 'ぽ', romaji: 'po' },
-    ],
-    yoon: [
-      { kana: 'きゃ', romaji: 'kya' }, { kana: 'きゅ', romaji: 'kyu' }, { kana: 'きょ', romaji: 'kyo' },
-      { kana: 'しゃ', romaji: 'sha' }, { kana: 'しゅ', romaji: 'shu' }, { kana: 'しょ', romaji: 'sho' },
-      { kana: 'ちゃ', romaji: 'cha' }, { kana: 'ちゅ', romaji: 'chu' }, { kana: 'ちょ', romaji: 'cho' },
-      { kana: 'にゃ', romaji: 'nya' }, { kana: 'にゅ', romaji: 'nyu' }, { kana: 'にょ', romaji: 'nyo' },
-      { kana: 'ひゃ', romaji: 'hya' }, { kana: 'ひゅ', romaji: 'hyu' }, { kana: 'ひょ', romaji: 'hyo' },
-      { kana: 'みゃ', romaji: 'mya' }, { kana: 'みゅ', romaji: 'myu' }, { kana: 'みょ', romaji: 'myo' },
-      { kana: 'りゃ', romaji: 'rya' }, { kana: 'りゅ', romaji: 'ryu' }, { kana: 'りょ', romaji: 'ryo' },
-      { kana: 'ぎゃ', romaji: 'gya' }, { kana: 'ぎゅ', romaji: 'gyu' }, { kana: 'ぎょ', romaji: 'gyo' },
-      { kana: 'じゃ', romaji: 'ja' }, { kana: 'じゅ', romaji: 'ju' }, { kana: 'じょ', romaji: 'jo' },
-      { kana: 'びゃ', romaji: 'bya' }, { kana: 'びゅ', romaji: 'byu' }, { kana: 'びょ', romaji: 'byo' },
-      { kana: 'ぴゃ', romaji: 'pya' }, { kana: 'ぴゅ', romaji: 'pyu' }, { kana: 'ぴょ', romaji: 'pyo' },
-    ],
-  },
-  katakana: {
-    gojuon: [
-      { kana: 'ア', romaji: 'a' }, { kana: 'イ', romaji: 'i' }, { kana: 'ウ', romaji: 'u' }, { kana: 'エ', romaji: 'e' }, { kana: 'オ', romaji: 'o' },
-      { kana: 'カ', romaji: 'ka' }, { kana: 'キ', romaji: 'ki' }, { kana: 'ク', romaji: 'ku' }, { kana: 'ケ', romaji: 'ke' }, { kana: 'コ', romaji: 'ko' },
-      { kana: 'サ', romaji: 'sa' }, { kana: 'シ', romaji: 'shi' }, { kana: 'ス', romaji: 'su' }, { kana: 'セ', romaji: 'se' }, { kana: 'ソ', romaji: 'so' },
-      { kana: 'タ', romaji: 'ta' }, { kana: 'チ', romaji: 'chi' }, { kana: 'ツ', romaji: 'tsu' }, { kana: 'テ', romaji: 'te' }, { kana: 'ト', romaji: 'to' },
-      { kana: 'ナ', romaji: 'na' }, { kana: 'ニ', romaji: 'ni' }, { kana: 'ヌ', romaji: 'nu' }, { kana: 'ネ', romaji: 'ne' }, { kana: 'ノ', romaji: 'no' },
-      { kana: 'ハ', romaji: 'ha' }, { kana: 'ヒ', romaji: 'hi' }, { kana: 'フ', romaji: 'fu' }, { kana: 'ヘ', romaji: 'he' }, { kana: 'ホ', romaji: 'ho' },
-      { kana: 'マ', romaji: 'ma' }, { kana: 'ミ', romaji: 'mi' }, { kana: 'ム', romaji: 'mu' }, { kana: 'メ', romaji: 'me' }, { kana: 'モ', romaji: 'mo' },
-      { kana: 'ヤ', romaji: 'ya' }, { kana: 'ユ', romaji: 'yu' }, { kana: 'ヨ', romaji: 'yo' },
-      { kana: 'ラ', romaji: 'ra' }, { kana: 'リ', romaji: 'ri' }, { kana: 'ル', romaji: 'ru' }, { kana: 'レ', romaji: 're' }, { kana: 'ロ', romaji: 'ro' },
-      { kana: 'ワ', romaji: 'wa' }, { kana: 'ヲ', romaji: 'wo' }, { kana: 'ン', romaji: 'n' },
-    ],
-    dakuon: [
-      { kana: 'ガ', romaji: 'ga' }, { kana: 'ギ', romaji: 'gi' }, { kana: 'グ', romaji: 'gu' }, { kana: 'ゲ', romaji: 'ge' }, { kana: 'ゴ', romaji: 'go' },
-      { kana: 'ザ', romaji: 'za' }, { kana: 'ジ', romaji: 'ji' }, { kana: 'ズ', romaji: 'zu' }, { kana: 'ゼ', romaji: 'ze' }, { kana: 'ゾ', romaji: 'zo' },
-      { kana: 'ダ', romaji: 'da' }, { kana: 'ヂ', romaji: 'ji' }, { kana: 'ヅ', romaji: 'zu' }, { kana: 'デ', romaji: 'de' }, { kana: 'ド', romaji: 'do' },
-      { kana: 'バ', romaji: 'ba' }, { kana: 'ビ', romaji: 'bi' }, { kana: 'ブ', romaji: 'bu' }, { kana: 'ベ', romaji: 'be' }, { kana: 'ボ', romaji: 'bo' },
-    ],
-    handakuon: [
-      { kana: 'パ', romaji: 'pa' }, { kana: 'ピ', romaji: 'pi' }, { kana: 'プ', romaji: 'pu' }, { kana: 'ペ', romaji: 'pe' }, { kana: 'ポ', romaji: 'po' },
-    ],
-    yoon: [
-      { kana: 'キャ', romaji: 'kya' }, { kana: 'キュ', romaji: 'kyu' }, { kana: 'キョ', romaji: 'kyo' },
-      { kana: 'シャ', romaji: 'sha' }, { kana: 'シュ', romaji: 'shu' }, { kana: 'ショ', romaji: 'sho' },
-      { kana: 'チャ', romaji: 'cha' }, { kana: 'チュ', romaji: 'chu' }, { kana: 'チョ', romaji: 'cho' },
-      { kana: 'ニャ', romaji: 'nya' }, { kana: 'ニュ', romaji: 'nyu' }, { kana: 'ニョ', romaji: 'nyo' },
-      { kana: 'ヒャ', romaji: 'hya' }, { kana: 'ヒュ', romaji: 'hyu' }, { kana: 'ヒョ', romaji: 'hyo' },
-      { kana: 'ミャ', romaji: 'mya' }, { kana: 'ミュ', romaji: 'myu' }, { kana: 'ミョ', romaji: 'myo' },
-      { kana: 'リャ', romaji: 'rya' }, { kana: 'リュ', romaji: 'ryu' }, { kana: 'リョ', romaji: 'ryo' },
-      { kana: 'ギャ', romaji: 'gya' }, { kana: 'ギュ', romaji: 'gyu' }, { kana: 'ギョ', romaji: 'gyo' },
-      { kana: 'ジャ', romaji: 'ja' }, { kana: 'ジュ', romaji: 'ju' }, { kana: 'ジョ', romaji: 'jo' },
-      { kana: 'ビャ', romaji: 'bya' }, { kana: 'ビュ', romaji: 'byu' }, { kana: 'ビョ', romaji: 'byo' },
-      { kana: 'ピャ', romaji: 'pya' }, { kana: 'ピュ', romaji: 'pyu' }, { kana: 'ピョ', romaji: 'pyo' },
-    ],
-  },
+type KanaGroup = {
+  id: string;
+  name: string;
+  items: Character[];
+};
+
+// --- DATASET PER BARIS / KOLOM (Gojūon, Dakuon, Handakuon & Yōon) ---
+const KANA_GROUPS_DATA: Record<KanaType, KanaGroup[]> = {
+  hiragana: [
+    { id: 'a', name: 'あ (A)', items: [{ kana: 'あ', romaji: 'a' }, { kana: 'い', romaji: 'i' }, { kana: 'う', romaji: 'u' }, { kana: 'え', romaji: 'e' }, { kana: 'お', romaji: 'o' }] },
+    { id: 'ka', name: 'か (KA)', items: [{ kana: 'か', romaji: 'ka' }, { kana: 'き', romaji: 'ki' }, { kana: 'く', romaji: 'ku' }, { kana: 'け', romaji: 'ke' }, { kana: 'こ', romaji: 'ko' }] },
+    { id: 'sa', name: 'さ (SA)', items: [{ kana: 'さ', romaji: 'sa' }, { kana: 'し', romaji: 'shi' }, { kana: 'す', romaji: 'su' }, { kana: 'せ', romaji: 'se' }, { kana: 'そ', romaji: 'so' }] },
+    { id: 'ta', name: 'た (TA)', items: [{ kana: 'た', romaji: 'ta' }, { kana: 'ち', romaji: 'chi' }, { kana: 'つ', romaji: 'tsu' }, { kana: 'て', romaji: 'te' }, { kana: 'と', romaji: 'to' }] },
+    { id: 'na', name: 'な (NA)', items: [{ kana: 'な', romaji: 'na' }, { kana: 'に', romaji: 'ni' }, { kana: 'ぬ', romaji: 'nu' }, { kana: 'ね', romaji: 'ne' }, { kana: 'の', romaji: 'no' }] },
+    { id: 'ha', name: 'は (HA)', items: [{ kana: 'は', romaji: 'ha' }, { kana: 'ひ', romaji: 'hi' }, { kana: 'ふ', romaji: 'fu' }, { kana: 'へ', romaji: 'he' }, { kana: 'ほ', romaji: 'ho' }] },
+    { id: 'ma', name: 'ま (MA)', items: [{ kana: 'ま', romaji: 'ma' }, { kana: 'み', romaji: 'mi' }, { kana: 'む', romaji: 'mu' }, { kana: 'め', romaji: 'me' }, { kana: 'も', romaji: 'mo' }] },
+    { id: 'ya', name: 'や (YA)', items: [{ kana: 'や', romaji: 'ya' }, { kana: 'ゆ', romaji: 'yu' }, { kana: 'よ', romaji: 'yo' }] },
+    { id: 'ra', name: 'ら (RA)', items: [{ kana: 'ら', romaji: 'ra' }, { kana: 'り', romaji: 'ri' }, { kana: 'る', romaji: 'ru' }, { kana: 'れ', romaji: 're' }, { kana: 'ろ', romaji: 'ro' }] },
+    { id: 'wa', name: 'わ (WA/N)', items: [{ kana: 'わ', romaji: 'wa' }, { kana: 'を', romaji: 'wo' }, { kana: 'ん', romaji: 'n' }] },
+    { id: 'ga', name: 'が (GA)', items: [{ kana: 'が', romaji: 'ga' }, { kana: 'ぎ', romaji: 'gi' }, { kana: 'ぐ', romaji: 'gu' }, { kana: 'げ', romaji: 'ge' }, { kana: 'ご', romaji: 'go' }] },
+    { id: 'za', name: 'ざ (ZA)', items: [{ kana: 'ざ', romaji: 'za' }, { kana: 'じ', romaji: 'ji' }, { kana: 'ず', romaji: 'zu' }, { kana: 'ぜ', romaji: 'ze' }, { kana: 'ぞ', romaji: 'zo' }] },
+    { id: 'da', name: 'だ (DA)', items: [{ kana: 'だ', romaji: 'da' }, { kana: 'ぢ', romaji: 'ji' }, { kana: 'づ', romaji: 'zu' }, { kana: 'で', romaji: 'de' }, { kana: 'ど', romaji: 'do' }] },
+    { id: 'ba', name: 'ば (BA)', items: [{ kana: 'ば', romaji: 'ba' }, { kana: 'び', romaji: 'bi' }, { kana: 'ぶ', romaji: 'bu' }, { kana: 'べ', romaji: 'be' }, { kana: 'ぼ', romaji: 'bo' }] },
+    { id: 'pa', name: 'ぱ (PA)', items: [{ kana: 'ぱ', romaji: 'pa' }, { kana: 'ぴ', romaji: 'pi' }, { kana: 'ぷ', romaji: 'pu' }, { kana: 'ぺ', romaji: 'pe' }, { kana: 'ぽ', romaji: 'po' }] },
+    { id: 'yoon', name: 'きゃ (Yōon)', items: [{ kana: 'きゃ', romaji: 'kya' }, { kana: 'きゅ', romaji: 'kyu' }, { kana: 'きょ', romaji: 'kyo' }, { kana: 'しゃ', romaji: 'sha' }, { kana: 'しゅ', romaji: 'shu' }, { kana: 'しょ', romaji: 'sho' }, { kana: 'ちゃ', romaji: 'cha' }, { kana: 'ちゅ', romaji: 'chu' }, { kana: 'ちょ', romaji: 'cho' }] },
+  ],
+  katakana: [
+    { id: 'a', name: 'ア (A)', items: [{ kana: 'ア', romaji: 'a' }, { kana: 'イ', romaji: 'i' }, { kana: 'ウ', romaji: 'u' }, { kana: 'エ', romaji: 'e' }, { kana: 'オ', romaji: 'o' }] },
+    { id: 'ka', name: 'カ (KA)', items: [{ kana: 'カ', romaji: 'ka' }, { kana: 'キ', romaji: 'ki' }, { kana: 'ク', romaji: 'ku' }, { kana: 'ケ', romaji: 'ke' }, { kana: 'コ', romaji: 'ko' }] },
+    { id: 'sa', name: 'サ (SA)', items: [{ kana: 'サ', romaji: 'sa' }, { kana: 'シ', romaji: 'shi' }, { kana: 'ス', romaji: 'su' }, { kana: 'セ', romaji: 'se' }, { kana: 'ソ', romaji: 'so' }] },
+    { id: 'ta', name: 'タ (TA)', items: [{ kana: 'タ', romaji: 'ta' }, { kana: 'チ', romaji: 'chi' }, { kana: 'ツ', romaji: 'tsu' }, { kana: 'テ', romaji: 'te' }, { kana: 'ト', romaji: 'to' }] },
+    { id: 'na', name: 'ナ (NA)', items: [{ kana: 'ナ', romaji: 'na' }, { kana: 'ニ', romaji: 'ni' }, { kana: 'ヌ', romaji: 'nu' }, { kana: 'ネ', romaji: 'ne' }, { kana: 'ノ', romaji: 'no' }] },
+    { id: 'ha', name: 'ハ (HA)', items: [{ kana: 'ハ', romaji: 'ha' }, { kana: 'ヒ', romaji: 'hi' }, { kana: 'フ', romaji: 'fu' }, { kana: 'ヘ', romaji: 'he' }, { kana: 'ホ', romaji: 'ho' }] },
+    { id: 'ma', name: 'マ (MA)', items: [{ kana: 'マ', romaji: 'ma' }, { kana: 'ミ', romaji: 'mi' }, { kana: 'ム', romaji: 'mu' }, { kana: 'メ', romaji: 'me' }, { kana: 'モ', romaji: 'mo' }] },
+    { id: 'ya', name: 'ヤ (YA)', items: [{ kana: 'ヤ', romaji: 'ya' }, { kana: 'ユ', romaji: 'yu' }, { kana: 'ヨ', romaji: 'yo' }] },
+    { id: 'ra', name: 'ラ (RA)', items: [{ kana: 'ラ', romaji: 'ra' }, { kana: 'リ', romaji: 'ri' }, { kana: 'ル', romaji: 'ru' }, { kana: 'レ', romaji: 're' }, { kana: 'ロ', romaji: 'ro' }] },
+    { id: 'wa', name: 'ワ (WA/N)', items: [{ kana: 'ワ', romaji: 'wa' }, { kana: 'ヲ', romaji: 'wo' }, { kana: 'ン', romaji: 'n' }] },
+    { id: 'ga', name: 'ガ (GA)', items: [{ kana: 'ガ', romaji: 'ga' }, { kana: 'ギ', romaji: 'gi' }, { kana: 'グ', romaji: 'gu' }, { kana: 'ゲ', romaji: 'ge' }, { kana: 'ゴ', romaji: 'go' }] },
+    { id: 'za', name: 'ザ (ZA)', items: [{ kana: 'ザ', romaji: 'za' }, { kana: 'ジ', romaji: 'ji' }, { kana: 'ズ', romaji: 'zu' }, { kana: 'ゼ', romaji: 'ze' }, { kana: 'ゾ', romaji: 'zo' }] },
+    { id: 'da', name: 'ダ (DA)', items: [{ kana: 'ダ', romaji: 'da' }, { kana: 'ヂ', romaji: 'ji' }, { kana: 'ヅ', romaji: 'zu' }, { kana: 'デ', romaji: 'de' }, { kana: 'ド', romaji: 'do' }] },
+    { id: 'ba', name: 'バ (BA)', items: [{ kana: 'バ', romaji: 'ba' }, { kana: 'ビ', romaji: 'bi' }, { kana: 'ブ', romaji: 'bu' }, { kana: 'ベ', romaji: 'be' }, { kana: 'ボ', romaji: 'bo' }] },
+    { id: 'pa', name: 'パ (PA)', items: [{ kana: 'パ', romaji: 'pa' }, { kana: 'ピ', romaji: 'pi' }, { kana: 'プ', romaji: 'pu' }, { kana: 'ペ', romaji: 'pe' }, { kana: 'ポ', romaji: 'po' }] },
+    { id: 'yoon', name: 'キャ (Yōon)', items: [{ kana: 'キャ', romaji: 'kya' }, { kana: 'キュ', romaji: 'kyu' }, { kana: 'キョ', romaji: 'kyo' }, { kana: 'シャ', romaji: 'sha' }, { kana: 'シュ', romaji: 'shu' }, { kana: 'ショ', romaji: 'sho' }, { kana: 'チャ', romaji: 'cha' }, { kana: 'チュ', romaji: 'chu' }, { kana: 'チョ', romaji: 'cho' }] },
+  ],
 };
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -94,18 +65,20 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-export default function GiraNihonggoApp() {
+export default function KanaQuizApp() {
   const [gameState, setGameState] = useState<GameState>('mode_select');
   const [quizMode, setQuizMode] = useState<QuizMode>('single');
   const [selectedKanaType, setSelectedKanaType] = useState<KanaType>('hiragana');
-  const [selectedCategories, setSelectedCategories] = useState<KanaCategory[]>(['gojuon']);
+  const [sentenceKanaType, setSentenceKanaType] = useState<SentenceKanaType>('hiragana');
+  
+  // State pilihan select all huruf (Default memilih select all 'a')
+  const [selectedGroupIds, setSelectedGroupIds] = useState<string[]>(['a']);
   const [sentenceCount, setSentenceCount] = useState<number>(5);
 
   const [singleDeck, setSingleDeck] = useState<Character[]>([]);
   const [sentenceDeck, setSentenceDeck] = useState<SentenceQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   
-  // State Error Modal Custom
   const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
   const [isAiFallback, setIsAiFallback] = useState<boolean>(false);
   
@@ -122,29 +95,36 @@ export default function GiraNihonggoApp() {
   const [streak, setStreak] = useState<number>(0);
   const [highestStreak, setHighestStreak] = useState<number>(0);
 
+  // Daftar grup untuk tipe kana aktif
+  const currentGroups = useMemo(() => KANA_GROUPS_DATA[selectedKanaType], [selectedKanaType]);
+
+  // Kalkulasi total kartu terpilih di mode single
   const totalAvailableSingleCards = useMemo(() => {
-    return selectedCategories.reduce((acc, cat) => {
-      return acc + KANA_MASTER_DATA[selectedKanaType][cat].length;
-    }, 0);
-  }, [selectedKanaType, selectedCategories]);
+    return currentGroups
+      .filter((g) => selectedGroupIds.includes(g.id))
+      .reduce((acc, g) => acc + g.items.length, 0);
+  }, [currentGroups, selectedGroupIds]);
 
-  const fullPool = useMemo(() => {
-    return [
-      ...KANA_MASTER_DATA[selectedKanaType].gojuon,
-      ...KANA_MASTER_DATA[selectedKanaType].dakuon,
-      ...KANA_MASTER_DATA[selectedKanaType].handakuon,
-      ...KANA_MASTER_DATA[selectedKanaType].yoon,
-    ];
-  }, [selectedKanaType]);
+  const fullPoolSingle = useMemo(() => {
+    return currentGroups.flatMap((g) => g.items);
+  }, [currentGroups]);
 
-  const toggleCategory = (cat: KanaCategory) => {
-    setSelectedCategories((prev) => {
-      if (prev.includes(cat)) {
-        if (prev.length === 1) return prev;
-        return prev.filter((c) => c !== cat);
+  const toggleGroup = (groupId: string) => {
+    setSelectedGroupIds((prev) => {
+      if (prev.includes(groupId)) {
+        if (prev.length === 1) return prev; // Minimal 1 select all harus terpilih
+        return prev.filter((id) => id !== groupId);
       }
-      return [...prev, cat];
+      return [...prev, groupId];
     });
+  };
+
+  const handleSelectAllGroups = () => {
+    setSelectedGroupIds(currentGroups.map((g) => g.id));
+  };
+
+  const handleDeselectAllGroups = () => {
+    setSelectedGroupIds(['a']); // Sisakan select all 'a'
   };
 
   const handleStartQuiz = async () => {
@@ -161,20 +141,21 @@ export default function GiraNihonggoApp() {
 
     if (quizMode === 'single') {
       let pool: Character[] = [];
-      selectedCategories.forEach((cat) => {
-        pool = [...pool, ...KANA_MASTER_DATA[selectedKanaType][cat]];
+      currentGroups.forEach((g) => {
+        if (selectedGroupIds.includes(g.id)) {
+          pool = [...pool, ...g.items];
+        }
       });
       setSingleDeck(shuffleArray(pool));
       setIsLoading(false);
       setGameState('playing');
     } else {
-      const { questions, isFallback } = await generateSentenceQuiz(selectedKanaType, sentenceCount);
-      
+      const { questions, isFallback } = await generateSentenceQuiz(sentenceKanaType, sentenceCount);
       setSentenceDeck(questions);
       setIsAiFallback(isFallback);
 
       if (isFallback) {
-        setShowErrorModal(true); // Tampilkan modal kustom
+        setShowErrorModal(true);
       }
 
       setIsLoading(false);
@@ -184,14 +165,14 @@ export default function GiraNihonggoApp() {
 
   const generateSingleOptions = useCallback(
     (correctRomaji: string) => {
-      const distractors = fullPool
+      const distractors = fullPoolSingle
         .filter((item) => item.romaji !== correctRomaji)
         .map((item) => item.romaji);
       const uniqueDistractors = Array.from(new Set(distractors));
       const shuffledDistractors = shuffleArray(uniqueDistractors).slice(0, 3);
       setSingleOptions(shuffleArray([correctRomaji, ...shuffledDistractors]));
     },
-    [fullPool]
+    [fullPoolSingle]
   );
 
   useEffect(() => {
@@ -247,7 +228,7 @@ export default function GiraNihonggoApp() {
       handleNextQuestion();
       return;
     }
-
+// Select All
     if (!textInput.trim()) return;
 
     setIsAnswered(true);
@@ -269,7 +250,7 @@ export default function GiraNihonggoApp() {
       setStreak(0);
     }
   };
-
+// select all
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Enter' && gameState === 'playing' && isAnswered) {
@@ -296,10 +277,10 @@ export default function GiraNihonggoApp() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans flex flex-col justify-between p-4 md:p-8 relative">
       {/* Header */}
-      <header className="max-w-xl mx-auto w-full flex items-center justify-between pb-4">
+      <header className="max-w-4xl mx-auto w-full flex items-center justify-between pb-4">
         <div className="flex items-center gap-2">
           <BookOpen className="text-cyan-400 size-6" />
-          <span className="text-xl font-black tracking-tight">Gira <span className="text-cyan-400">Nihonggo</span></span>
+          <span className="text-xl font-black tracking-tight">Kana<span className="text-cyan-400">Quiz</span></span>
         </div>
         {gameState !== 'mode_select' && (
           <button
@@ -311,7 +292,7 @@ export default function GiraNihonggoApp() {
         )}
       </header>
 
-      {/* --- MODAL CARD WARNING AI FALLBACK --- */}
+      {/* --- MODAL WARNING AI FALLBACK --- */}
       {showErrorModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-slate-900 border border-slate-800 rounded-3xl max-w-sm w-full p-6 space-y-5 shadow-2xl relative text-center">
@@ -329,7 +310,7 @@ export default function GiraNihonggoApp() {
             <div className="space-y-2">
               <h3 className="text-lg font-bold text-white">Masalah Koneksi AI</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Gemini AI sedang mengalami gangguan atau limit habis. Kuis tetap berjalan menggunakan <span className="text-amber-400 font-semibold">{sentenceCount} pertanyaan default</span>.
+                Gemini AI sedang tidak merespons. Kuis tetap berjalan menggunakan <span className="text-amber-400 font-semibold">{sentenceCount} pertanyaan default</span>.
               </p>
             </div>
 
@@ -347,7 +328,7 @@ export default function GiraNihonggoApp() {
       {gameState === 'mode_select' && (
         <main className="max-w-xl mx-auto w-full my-auto space-y-6">
           <div className="text-center space-y-2">
-            <h1 className="text-3xl font-extrabold text-white">Pilih Mode Belajar</h1>
+            <h1 className="text-3xl font-extrabold text-white">Pilih Mode Latihan</h1>
             <p className="text-sm text-slate-400">Pilih jenis tebakan yang ingin kamu latih</p>
           </div>
 
@@ -364,7 +345,7 @@ export default function GiraNihonggoApp() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">Mode Single Karakter</h3>
-                <p className="text-xs text-slate-400 mt-1">Tebak karakter satu per satu (pilihan ganda) sesuai kelompok huruf.</p>
+                <p className="text-xs text-slate-400 mt-1">Tebak karakter satu per satu (pilihan ganda) sesuai select all/baris huruf.</p>
               </div>
             </button>
 
@@ -389,70 +370,122 @@ export default function GiraNihonggoApp() {
 
       {/* --- SCREEN 1: SETUP --- */}
       {gameState === 'setup' && (
-        <main className="max-w-xl mx-auto w-full my-auto space-y-6">
-          <div className="text-center space-y-2">
-            <h1 className="text-3xl font-extrabold text-white">
-              {quizMode === 'single' ? 'Konfigurasi Mode Single' : 'Konfigurasi Mode Kalimat AI'}
-            </h1>
-            <p className="text-sm text-slate-400">Atur parameter sebelum memulai kuis</p>
-          </div>
-
+        <main className="max-w-4xl mx-auto w-full my-auto space-y-6">
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-6 shadow-2xl">
-            {/* Tipe Kana */}
+            {/* Tipe Kana Switcher */}
             <div>
-              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-3">Tipe Huruf</label>
-              <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-2xl border border-slate-800">
-                {(['hiragana', 'katakana'] as KanaType[]).map((type) => (
-                  <button
-                    key={type}
-                    onClick={() => setSelectedKanaType(type)}
-                    className={`py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition-all ${
-                      selectedKanaType === type
-                        ? 'bg-cyan-600 text-white shadow-md'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    {type}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Kategori khusus Mode Single */}
-            {quizMode === 'single' && (
-              <div>
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-3">Kategori Kumpulan Huruf</label>
-                <div className="grid grid-cols-1 gap-2">
-                  {[
-                    { id: 'gojuon', label: 'Dasar (Gojūon)', count: KANA_MASTER_DATA[selectedKanaType].gojuon.length },
-                    { id: 'dakuon', label: 'Tenten / Petik (Dakuon)', count: KANA_MASTER_DATA[selectedKanaType].dakuon.length },
-                    { id: 'handakuon', label: 'Maru / Lingkaran (Handakuon)', count: KANA_MASTER_DATA[selectedKanaType].handakuon.length },
-                    { id: 'yoon', label: 'Gabungan (Yōon)', count: KANA_MASTER_DATA[selectedKanaType].yoon.length },
-                  ].map((cat) => {
-                    const isChecked = selectedCategories.includes(cat.id as KanaCategory);
-                    return (
+              {quizMode === 'single' ? (
+                <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-2xl border border-slate-800 max-w-xs mx-auto">
+                  {(['hiragana', 'katakana'] as KanaType[]).map((type) => (
+                    <button
+                      key={type}
+                      onClick={() => setSelectedKanaType(type)}
+                      className={`py-2.5 rounded-xl font-bold text-xs tracking-wider transition-all ${
+                        selectedKanaType === type
+                          ? 'bg-cyan-600 text-white shadow-md'
+                          : 'text-slate-400 hover:text-white'
+                      }`}
+                    >
+                      {type}
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <label className="text-xs font-bold text-slate-400 tracking-wider block text-center">Jenis Aksara</label>
+                  <div className="grid grid-cols-3 gap-2 bg-slate-950 p-1 rounded-2xl border border-slate-800 max-w-sm mx-auto">
+                    {([
+                      { value: 'hiragana', label: 'Hiragana' },
+                      { value: 'katakana', label: 'Katakana' },
+                      { value: 'both', label: 'Keduanya' },
+                    ] as { value: SentenceKanaType; label: string }[]).map(({ value, label }) => (
                       <button
-                        key={cat.id}
-                        onClick={() => toggleCategory(cat.id as KanaCategory)}
-                        className={`flex items-center justify-between p-4 rounded-xl border text-left text-sm font-semibold transition-all ${
-                          isChecked
-                            ? 'bg-cyan-950/40 border-cyan-700 text-cyan-200'
-                            : 'bg-slate-950/50 border-slate-800 text-slate-500 hover:text-slate-300'
+                        key={value}
+                        onClick={() => setSentenceKanaType(value)}
+                        className={`py-2.5 rounded-xl font-bold text-xs tracking-wider transition-all ${
+                          sentenceKanaType === value
+                            ? 'bg-cyan-600 text-white shadow-md'
+                            : 'text-slate-400 hover:text-white'
                         }`}
                       >
-                        <span className="flex items-center gap-3">
-                          <Layers3 size={18} className={isChecked ? 'text-cyan-400' : 'text-slate-600'} />
-                          {cat.label}
-                        </span>
-                        <div className="flex items-center gap-3">
-                          <span className="text-xs text-slate-500 font-mono">({cat.count})</span>
-                          <div className={`size-5 rounded-md border flex items-center justify-center ${isChecked ? 'bg-cyan-600 border-cyan-500' : 'border-slate-700'}`}>
-                            {isChecked && <CheckCircle2 size={14} className="text-white" />}
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* SELEKSI BARIS / KOLOM KANA (MATRIX LAYOUT) */}
+            {quizMode === 'single' && (
+              <div className="space-y-4">
+                <div className="flex items-center justify-between px-1">
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={handleSelectAllGroups}
+                      className="text-xs text-cyan-400 hover:underline flex items-center gap-1 font-medium"
+                    >
+                      <CheckSquare size={13} /> Select All
+                    </button>
+                    <span className="text-slate-700">|</span>
+                    <button
+                      type="button"
+                      onClick={handleDeselectAllGroups}
+                      className="text-xs text-slate-400 hover:underline flex items-center gap-1 font-medium"
+                    >
+                      <Square size={13} /> Reset
+                    </button>
+                  </div>
+                </div>
+
+                {/* Matriks Tabel Menyatu */}
+                <div className="bg-slate-950/60 border border-slate-800/80 rounded-2xl p-4 overflow-x-auto overflow-y-auto max-h-[340px] scrollbar-thin scrollbar-thumb-slate-700">
+                  <div className="flex justify-between gap-6 min-w-max">
+                    {currentGroups.map((group) => {
+                      const isSelected = selectedGroupIds.includes(group.id);
+                      return (
+                        <div
+                          key={group.id}
+                          className="flex flex-col items-center gap-4 py-1"
+                        >
+                          {/* Toggle Switch Top Header */}
+                          <button
+                            type="button"
+                            onClick={() => toggleGroup(group.id)}
+                            className={`w-10 h-6 rounded-full p-1 transition-colors relative flex items-center ${
+                              isSelected ? 'bg-cyan-500' : 'bg-slate-800'
+                            }`}
+                          >
+                            <div
+                              className={`size-4 rounded-full bg-white shadow-sm transition-transform ${
+                                isSelected ? 'translate-x-4' : 'translate-x-0'
+                              }`}
+                            />
+                          </button>
+
+                          {/* Items Kana Vertikal Menyatu */}
+                          <div
+                            onClick={() => toggleGroup(group.id)}
+                            className={`flex flex-col items-center gap-3 cursor-pointer select-none transition-opacity ${
+                              isSelected ? 'opacity-100' : 'opacity-30 hover:opacity-50'
+                            }`}
+                          >
+                            {group.items.map((item, idx) => (
+                              <div key={idx} className="text-center w-12 py-0.5">
+                                <span className="text-xl font-bold text-white block leading-tight">
+                                  {item.kana}
+                                </span>
+                                <span className="text-[10px] font-mono text-slate-400 block tracking-tight">
+                                  {item.romaji}
+                                </span>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                      </button>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             )}
@@ -460,7 +493,7 @@ export default function GiraNihonggoApp() {
             {/* Opsi Jumlah Soal Khusus Mode Kalimat */}
             {quizMode === 'sentence' && (
               <div>
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-3">Jumlah Soal Kalimat</label>
+                <label className="text-xs font-bold text-slate-400 tracking-wider block mb-3">Jumlah Soal Kalimat</label>
                 <div className="grid grid-cols-3 gap-2">
                   {[5, 10, 20].map((count) => (
                     <button
@@ -479,9 +512,10 @@ export default function GiraNihonggoApp() {
               </div>
             )}
 
+            {/* Banner Jumlah Kartu */}
             {quizMode === 'single' ? (
               <div className="flex items-center justify-between bg-slate-950 px-4 py-3 rounded-xl border border-slate-800 text-xs text-slate-400">
-                <span>Total soal yang akan dimainkan:</span>
+                <span>Total kombinasi kartu terpilih:</span>
                 <span className="font-extrabold text-cyan-400 text-sm font-mono">{totalAvailableSingleCards} Soal</span>
               </div>
             ) : (
@@ -493,15 +527,15 @@ export default function GiraNihonggoApp() {
             <button
               onClick={handleStartQuiz}
               disabled={isLoading}
-              className="w-full py-4 bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-800 text-white font-bold rounded-2xl flex items-center justify-center gap-2 transition shadow-lg text-base"
+              className="w-full py-4 bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-800 text-white font-bold rounded-2xl flex items-center justify-center gap-2 transition shadow-lg text-base max-w-md mx-auto block"
             >
               {isLoading ? (
                 <>
-                  <Loader2 size={20} className="animate-spin text-cyan-400" /> Generating AI...
+                  <Loader2 size={20} className="animate-spin text-cyan-400 inline" /> Generating AI...
                 </>
               ) : (
                 <>
-                  <Play size={20} className="fill-current" /> Mulai Tebakan
+                  <Play size={20} className="fill-current inline" /> Mulai Latihan
                 </>
               )}
             </button>
@@ -540,6 +574,20 @@ export default function GiraNihonggoApp() {
 
           {/* Card Soal Utama */}
           <div className="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[200px] shadow-2xl text-center">
+            <button
+              onClick={(e) =>
+                playAudio(
+                  quizMode === 'single'
+                    ? singleDeck[currentIndex]?.kana
+                    : sentenceDeck[currentIndex]?.sentence,
+                  e
+                )
+              }
+              className="absolute top-4 right-4 p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+            >
+              <Volume2 size={20} />
+            </button>
+
             {quizMode === 'single' ? (
               <div className="text-8xl font-black text-white tracking-wide">
                 {singleDeck[currentIndex]?.kana}
@@ -647,7 +695,7 @@ export default function GiraNihonggoApp() {
               onClick={handleNextQuestion}
               className="w-full py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-2xl flex items-center justify-center gap-2 transition shadow-lg text-base animate-in fade-in slide-in-from-bottom-2 duration-200"
             >
-              Soal Berikutnya
+              Lanjut Soal Berikutnya (Enter) →
             </button>
           )}
         </main>
@@ -670,7 +718,7 @@ export default function GiraNihonggoApp() {
 
             <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 grid grid-cols-3 gap-2">
               <div className="p-2">
-                <div className="text-[10px] uppercase font-bold text-slate-500">Akurasi</div>
+                <div className="text-[10px] font-bold text-slate-500">Akurasi</div>
                 <div className="text-xl font-black text-emerald-400 mt-1">
                   {Math.round(
                     (score / (quizMode === 'single' ? singleDeck.length : sentenceDeck.length)) * 100
@@ -678,13 +726,13 @@ export default function GiraNihonggoApp() {
                 </div>
               </div>
               <div className="p-2 border-x border-slate-800">
-                <div className="text-[10px] uppercase font-bold text-slate-500">Skor</div>
+                <div className="text-[10px] font-bold text-slate-500">Skor</div>
                 <div className="text-xl font-black text-cyan-400 mt-1">
                   {score} / {quizMode === 'single' ? singleDeck.length : sentenceDeck.length}
                 </div>
               </div>
               <div className="p-2">
-                <div className="text-[10px] uppercase font-bold text-slate-500">Max Streak</div>
+                <div className="text-[10px] font-bold text-slate-500">Max Streak</div>
                 <div className="text-xl font-black text-amber-400 mt-1">{highestStreak}</div>
               </div>
             </div>
@@ -708,7 +756,7 @@ export default function GiraNihonggoApp() {
       )}
 
       <footer className="text-center text-xs text-slate-600 py-2">
-        Gira Nihonggo • Built with Next.js
+        &copy;Giraichi • Gira Nihonggo
       </footer>
     </div>
   );
