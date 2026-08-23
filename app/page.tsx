@@ -565,7 +565,7 @@ export default function KanaQuizApp() {
 
       {/* --- SCREEN 2: PLAYING --- */}
       {gameState === 'playing' && (
-        <main className="max-w-xl mx-auto w-full my-auto space-y-6">
+        <main className="max-w-xl mx-auto w-full my-auto space-y-4 md:space-y-6">
           {quizMode === 'sentence' && isAiFallback && (
             <div className="flex items-center gap-2.5 p-3 rounded-xl bg-amber-950/60 border border-amber-800/80 text-amber-200 text-xs font-medium">
               <AlertTriangle size={18} className="text-amber-400 shrink-0" />
@@ -602,14 +602,14 @@ export default function KanaQuizApp() {
           </div>
 
           {/* Card Soal Utama */}
-          <div className="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[200px] shadow-2xl text-center">
+          <div className="relative bg-slate-900 border border-slate-800 rounded-2xl md:rounded-3xl flex flex-col items-center justify-center min-h-[100px] md:min-h-[200px] shadow-2xl text-center">
             {quizMode === 'single' ? (
-              <div className="text-8xl font-black text-white tracking-wide">
+              <div className="text-3xl md:text-8xl font-black text-white tracking-wide">
                 {singleDeck[currentIndex]?.kana}
               </div>
             ) : (
               <div className="space-y-3">
-                <div className="text-3xl md:text-4xl font-bold text-white tracking-wider leading-relaxed">
+                <div className="text-2xl md:text-4xl font-bold text-white tracking-wider leading-relaxed">
                   {sentenceDeck[currentIndex]?.sentence}
                 </div>
                 <div className="text-xs text-cyan-400/80 font-medium bg-cyan-950/40 border border-cyan-900/50 py-1 px-3 rounded-full inline-block">
@@ -633,7 +633,7 @@ export default function KanaQuizApp() {
                 autoCorrect="off"
                 autoCapitalize="off"
                 spellCheck={false}
-                className={`w-full py-4 px-5 bg-slate-900 border-2 rounded-2xl text-xl font-bold text-white text-center placeholder-slate-500 focus:outline-none transition-all tracking-widest ${
+                className={`w-full py-3 px-4 md:py-4 md:px-5 bg-slate-900 border-2 rounded-xl md:rounded-2xl text-lg md:text-xl font-bold text-white text-center placeholder-slate-500 focus:outline-none transition-all tracking-widest ${
                   isInputRed
                     ? 'border-rose-500 bg-rose-950/20 text-rose-400'
                     : isAnswered
@@ -652,7 +652,7 @@ export default function KanaQuizApp() {
                   onChange={(e) => setTextInput(e.target.value)}
                   disabled={isAnswered}
                   placeholder="Ketik cara baca Romaji di sini..."
-                  className={`w-full py-4 pl-5 pr-14 bg-slate-900 border-2 rounded-2xl text-lg font-medium text-white placeholder-slate-500 focus:outline-none transition-all ${
+                  className={`w-full py-3 md:py-4 pl-4 pr-12 md:pl-5 md:pr-14 bg-slate-900 border-2 rounded-xl md:rounded-2xl text-base md:text-lg font-medium text-white placeholder-slate-500 focus:outline-none transition-all ${
                     isAnswered
                       ? sentenceResult?.isCorrect
                         ? 'border-emerald-500 bg-emerald-950/20'
@@ -663,9 +663,9 @@ export default function KanaQuizApp() {
                 <button
                   type="submit"
                   disabled={!isAnswered && !textInput.trim()}
-                  className="absolute right-2 p-3 bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-800 text-white rounded-xl transition"
+                  className="absolute right-1.5 p-2.5 md:right-2 md:p-3 bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-800 text-white rounded-lg md:rounded-xl transition"
                 >
-                  <Send size={18} />
+                  <Send size={16} className="md:w-[18px] md:h-[18px]" />
                 </button>
               </form>
 
