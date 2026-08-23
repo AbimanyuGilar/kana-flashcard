@@ -315,10 +315,10 @@ export default function KanaQuizApp() {
         </div>
         {gameState !== 'mode_select' && (
           <button
-            onClick={() => setGameState('mode_select')}
+            onClick={gameState === 'playing' ? () => setGameState('setup') : () => setGameState('mode_select')}
             className="flex items-center gap-1 text-xs text-slate-400 hover:text-white transition"
           >
-            <ArrowLeft size={14} /> Ganti Mode
+            <ArrowLeft size={14} /> Kembali
           </button>
         )}
       </header>
@@ -465,7 +465,7 @@ export default function KanaQuizApp() {
                       onClick={handleDeselectAllGroups}
                       className="text-xs text-slate-400 hover:underline flex items-center gap-1 font-medium"
                     >
-                      <Square size={13} /> Reset
+                      Reset
                     </button>
                   </div>
                 </div>
@@ -767,10 +767,10 @@ export default function KanaQuizApp() {
 
             <div className="flex gap-3">
               <button
-                onClick={() => setGameState('mode_select')}
+                onClick={() => setGameState('setup')}
                 className="flex-1 py-4 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-2xl transition text-sm"
               >
-                Ganti Mode
+                Kembali
               </button>
               <button
                 onClick={handleStartQuiz}
