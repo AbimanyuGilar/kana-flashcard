@@ -204,9 +204,7 @@ export default function KanaQuizApp() {
         });
       }
       
-      autoNextTimeoutRef.current = setTimeout(() => {
-        handleNextQuestion();
-      }, 150);
+      handleNextQuestion();
       return;
     }
 
@@ -217,11 +215,8 @@ export default function KanaQuizApp() {
         setHasMissedCurrentCard(true);
         setStreak(0);
       }
-      // Auto-next jika salah, beri waktu agak lebih lama (misal 800ms) 
-      // Jika user mulai mengetik, timeout dibatalkan (di atas)
-      autoNextTimeoutRef.current = setTimeout(() => {
-        handleNextQuestion();
-      }, 800);
+      
+      handleNextQuestion();
     }
   };
 
@@ -245,7 +240,6 @@ export default function KanaQuizApp() {
       setIsAnswered(false);
       setTextInput('');
       setSentenceResult(null);
-      setIsInputRed(false);
       setHasMissedCurrentCard(false);
     } else {
       setGameState('result');
