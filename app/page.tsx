@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
-import { Volume2, BookOpen, Flame, RotateCcw, CheckCircle2, XCircle, Award, Play, ArrowLeft, Type, MessageSquareCode, Loader2, Send, AlertTriangle, X, CheckSquare, Square } from 'lucide-react';
+import { BookOpen, Flame, RotateCcw, CheckCircle2, XCircle, Award, Play, ArrowLeft, Type, MessageSquareCode, Loader2, Send, AlertTriangle, X, CheckSquare, Square } from 'lucide-react';
 import { generateSentenceQuiz, SentenceQuestion } from './actions';
 
 type Character = { kana: string; romaji: string };
@@ -293,17 +293,6 @@ export default function KanaQuizApp() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [gameState, isAnswered, handleNextQuestion]);
-
-  const playAudio = (text: string, e?: React.MouseEvent) => {
-    e?.stopPropagation();
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'ja-JP';
-      utterance.rate = 0.8;
-      window.speechSynthesis.speak(utterance);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans flex flex-col justify-between p-4 md:p-8 relative">
@@ -614,20 +603,6 @@ export default function KanaQuizApp() {
 
           {/* Card Soal Utama */}
           <div className="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center min-h-[200px] shadow-2xl text-center">
-            <button
-              onClick={(e) =>
-                playAudio(
-                  quizMode === 'single'
-                    ? singleDeck[currentIndex]?.kana
-                    : sentenceDeck[currentIndex]?.sentence,
-                  e
-                )
-              }
-              className="absolute top-4 right-4 p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
-            >
-              <Volume2 size={20} />
-            </button>
-
             {quizMode === 'single' ? (
               <div className="text-8xl font-black text-white tracking-wide">
                 {singleDeck[currentIndex]?.kana}
@@ -723,7 +698,7 @@ export default function KanaQuizApp() {
               onClick={handleNextQuestion}
               className="w-full py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-2xl flex items-center justify-center gap-2 transition shadow-lg text-base animate-in fade-in slide-in-from-bottom-2 duration-200"
             >
-              Lanjut Soal Berikutnya (Enter) →
+              Soal Berikutnya
             </button>
           )}
         </main>
