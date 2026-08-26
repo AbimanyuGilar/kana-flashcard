@@ -80,12 +80,18 @@ export async function generateSentenceQuiz(
           ? 'Katakana penuh'
           : 'campuran Hiragana dan Katakana (tanpa Kanji, setiap kalimat boleh full Hiragana atau full Katakana atau kombinasi keduanya)';
 
-    const prompt = `Buatkan ${count} kalimat atau kata serapan bahasa Jepang sederhana yang unik dan berbeda satu sama lain untuk latihan membaca.\n
-Ketentuan:\n
-1. Gunakan ${scriptInstruction}.\n
-2. Sertakan cara baca dalam Romaji (gunakan huruf kecil semua, pisahkan tiap kata dengan spasi/strip bila perlu, tanpa tanda baca khusus).\n
-3. Sertakan terjemahan bahasa Indonesia singkat.\n
-4. Jangan gunakan kalimat yang umum/template, supaya bervariasi tiap request.`;
+    const prompt = `Buatkan ${count} kalimat atau kata serapan bahasa Jepang sederhana yang unik, kreatif, dan berbeda satu sama lain untuk latihan membaca.
+
+Aturan Penulisan:
+1. Gunakan ${scriptInstruction}.
+2. Sertakan cara baca dalam Romaji menggunakan Hepburn Standard:
+   - Tulis huruf kecil semua.
+   - Pisahkan tiap kata dengan spasi, tanpa tanda baca khusus.
+   - Partikel を wajib ditulis 'o' (bukan 'wo').
+   - Partikel は wajib ditulis 'wa', dan へ wajib ditulis 'e'.
+   - Vokal panjang ditulis berdasarkan bunyi pengucapan fonetiknya (contoh: きのう ditulis 'kinoo', コーヒー ditulis 'koohii').
+3. Sertakan terjemahan bahasa Indonesia yang singkat dan alami.
+4. Hindari kalimat pasaran/template dasar (seperti "watashi wa gakusei desu"). Buat variasi konteks yang unik di setiap request.`;
 
     const response = await ai.models.generateContent({
       model: process.env.GEMINI_MODEL as string,
