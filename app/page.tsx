@@ -7,7 +7,7 @@ import ModeSelect from './components/ModeSelect';
 export default function HomePage() {
   const router = useRouter();
 
-  const handleSelectMode = (mode: 'single' | 'sentence') => {
+  const handleSelectMode = (mode: 'single' | 'sentence' | 'kanji') => {
     router.push(`/${mode}`);
   };
 

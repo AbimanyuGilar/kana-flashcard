@@ -141,8 +141,8 @@ export default function SinglePage() {
 
   useEffect(() => {
     if (gameState === 'playing') {
-      setTextInput('');
-      setTimeout(() => inputRef.current?.focus(), 80);
+      const timeout = setTimeout(() => inputRef.current?.focus(), 80);
+      return () => clearTimeout(timeout);
     }
   }, [gameState, currentIndex]);
 

@@ -1,11 +1,11 @@
 'use client';
 
 import { Award, RotateCcw } from 'lucide-react';
-import { QuizMode, KanaType } from '../types';
+import { QuizMode } from '../types';
 
 interface ResultScreenProps {
   quizMode: QuizMode;
-  selectedKanaType: KanaType;
+  selectedKanaType: string;
   score: number;
   highestStreak: number;
   totalQuestions: number;

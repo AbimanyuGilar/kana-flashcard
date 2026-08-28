@@ -1,0 +1,4004 @@
+[
+  {
+    "kanji": "会う",
+    "hiragana": "あう",
+    "romaji": "au",
+    "arti": "bertemu"
+  },
+  {
+    "kanji": "青",
+    "hiragana": "あお",
+    "romaji": "ao",
+    "arti": "biru"
+  },
+  {
+    "kanji": "青い",
+    "hiragana": "あおい",
+    "romaji": "aoi",
+    "arti": "biru"
+  },
+  {
+    "kanji": "赤",
+    "hiragana": "あか",
+    "romaji": "aka",
+    "arti": "merah"
+  },
+  {
+    "kanji": "赤い",
+    "hiragana": "あかい",
+    "romaji": "akai",
+    "arti": "merah"
+  },
+  {
+    "kanji": "明い",
+    "hiragana": "あかるい",
+    "romaji": "akarui",
+    "arti": "terang"
+  },
+  {
+    "kanji": "秋",
+    "hiragana": "あき",
+    "romaji": "aki",
+    "arti": "musim gugur"
+  },
+  {
+    "kanji": "開く",
+    "hiragana": "あく",
+    "romaji": "aku",
+    "arti": "untuk membuka, menjadi terbuka"
+  },
+  {
+    "kanji": "開ける",
+    "hiragana": "あける",
+    "romaji": "akeru",
+    "arti": "membuka"
+  },
+  {
+    "kanji": "上げる",
+    "hiragana": "あげる",
+    "romaji": "ageru",
+    "arti": "memberi"
+  },
+  {
+    "kanji": "朝",
+    "hiragana": "あさ",
+    "romaji": "asa",
+    "arti": "pagi"
+  },
+  {
+    "kanji": "朝御飯",
+    "hiragana": "あさごはん",
+    "romaji": "asagohan",
+    "arti": "sarapan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あさって",
+    "romaji": "asatte",
+    "arti": "lusa"
+  },
+  {
+    "kanji": "足",
+    "hiragana": "あし",
+    "romaji": "ashi",
+    "arti": "kaki, kaki"
+  },
+  {
+    "kanji": "明日",
+    "hiragana": "あした",
+    "romaji": "ashita",
+    "arti": "besok"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あそこ",
+    "romaji": "asoko",
+    "arti": "di sana"
+  },
+  {
+    "kanji": "遊ぶ",
+    "hiragana": "あそぶ",
+    "romaji": "asobu",
+    "arti": "untuk bermain, untuk melakukan kunjungan"
+  },
+  {
+    "kanji": "暖かい",
+    "hiragana": "あたたかい",
+    "romaji": "atatakai",
+    "arti": "hangat"
+  },
+  {
+    "kanji": "頭",
+    "hiragana": "あたま",
+    "romaji": "atama",
+    "arti": "kepala"
+  },
+  {
+    "kanji": "新しい",
+    "hiragana": "あたらしい",
+    "romaji": "atarashii",
+    "arti": "baru"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あちら",
+    "romaji": "achira",
+    "arti": "sana"
+  },
+  {
+    "kanji": "暑い",
+    "hiragana": "あつい",
+    "romaji": "atsui",
+    "arti": "panas"
+  },
+  {
+    "kanji": "熱い",
+    "hiragana": "あつい",
+    "romaji": "atsui",
+    "arti": "panas untuk disentuh"
+  },
+  {
+    "kanji": "厚い",
+    "hiragana": "あつい",
+    "romaji": "atsui",
+    "arti": "baik, dalam, tebal"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あっち",
+    "romaji": "acchi",
+    "arti": "di sana"
+  },
+  {
+    "kanji": "後",
+    "hiragana": "あと",
+    "romaji": "ato",
+    "arti": "setelah itu"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あなた",
+    "romaji": "anata",
+    "arti": "kamu"
+  },
+  {
+    "kanji": "兄",
+    "hiragana": "あに",
+    "romaji": "ani",
+    "arti": "(rendah hati) kakak"
+  },
+  {
+    "kanji": "姉妹",
+    "hiragana": "あね",
+    "romaji": "ane",
+    "arti": "(rendah hati) kakak perempuan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あの",
+    "romaji": "ano",
+    "arti": "bahwa di sana"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あの",
+    "romaji": "ano",
+    "arti": "um"
+  },
+  {
+    "kanji": null,
+    "hiragana": "アパート",
+    "romaji": "to apa",
+    "arti": "Apartemen"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あびる",
+    "romaji": "abiru",
+    "arti": "untuk mandi, untuk mandi"
+  },
+  {
+    "kanji": "危ない",
+    "hiragana": "あぶない",
+    "romaji": "abunai",
+    "arti": "berbahaya"
+  },
+  {
+    "kanji": "甘い",
+    "hiragana": "あまい",
+    "romaji": "amai",
+    "arti": "manis"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あまり",
+    "romaji": "amari",
+    "arti": "tidak terlalu"
+  },
+  {
+    "kanji": "雨",
+    "hiragana": "あめ",
+    "romaji": "ame",
+    "arti": "hujan"
+  },
+  {
+    "kanji": "飴",
+    "hiragana": "あめ",
+    "romaji": "ame",
+    "arti": "Permen"
+  },
+  {
+    "kanji": "洗う",
+    "hiragana": "あらう",
+    "romaji": "arau",
+    "arti": "untuk mencuci"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ある",
+    "romaji": "aru",
+    "arti": "harus, telah (dipakai untuk benda mati"
+  },
+  {
+    "kanji": "歩く",
+    "hiragana": "あるく",
+    "romaji": "aruku",
+    "arti": "berjalan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "あれ",
+    "romaji": "are",
+    "arti": "bahwa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いいよい",
+    "romaji": "ii/yoi",
+    "arti": "baik"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いいえ",
+    "romaji": "iie",
+    "arti": "tidak"
+  },
+  {
+    "kanji": "言う",
+    "hiragana": "いう",
+    "romaji": "iu",
+    "arti": "mengatakan"
+  },
+  {
+    "kanji": "家",
+    "hiragana": "いえ",
+    "romaji": "ie",
+    "arti": "rumah"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いかが",
+    "romaji": "ikaga",
+    "arti": "bagaimana"
+  },
+  {
+    "kanji": "行く",
+    "hiragana": "いく",
+    "romaji": "iku",
+    "arti": "untuk pergi"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いくつ",
+    "romaji": "ikutsu",
+    "arti": "berapa banyak?, berapa lama?"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いくら",
+    "romaji": "ikura",
+    "arti": "berapa banyak?"
+  },
+  {
+    "kanji": "池",
+    "hiragana": "いけ",
+    "romaji": "ike",
+    "arti": "kolam"
+  },
+  {
+    "kanji": "医者",
+    "hiragana": "いしゃ",
+    "romaji": "isha",
+    "arti": "dokter medis"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いす",
+    "romaji": "isu",
+    "arti": "kursi"
+  },
+  {
+    "kanji": "忙しい",
+    "hiragana": "いそがしい",
+    "romaji": "isogashii",
+    "arti": "sibuk, jengkel"
+  },
+  {
+    "kanji": "痛い",
+    "hiragana": "いたい",
+    "romaji": "itai",
+    "arti": "menyakitkan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いち",
+    "romaji": "ichi",
+    "arti": "satu"
+  },
+  {
+    "kanji": "一日",
+    "hiragana": "いちにち",
+    "romaji": "ichinichi",
+    "arti": "(1) satu hari, (2) pertama bulan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いちばん",
+    "romaji": "ichiban",
+    "arti": "terbaik, pertama"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いつ",
+    "romaji": "itsu",
+    "arti": "kapan"
+  },
+  {
+    "kanji": "五日",
+    "hiragana": "いつか",
+    "romaji": "itsuka",
+    "arti": "lima hari, hari kelima"
+  },
+  {
+    "kanji": "一緒",
+    "hiragana": "いっしょ",
+    "romaji": "issho",
+    "arti": "bersama"
+  },
+  {
+    "kanji": "五つ",
+    "hiragana": "いつつ",
+    "romaji": "itsutsu",
+    "arti": "lima"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いつも",
+    "romaji": "itsumo",
+    "arti": "selalu"
+  },
+  {
+    "kanji": "犬",
+    "hiragana": "いぬ",
+    "romaji": "inu",
+    "arti": "anjing"
+  },
+  {
+    "kanji": "今",
+    "hiragana": "いま",
+    "romaji": "ima",
+    "arti": "sekarang"
+  },
+  {
+    "kanji": "意味",
+    "hiragana": "いみ",
+    "romaji": "imi",
+    "arti": "arti"
+  },
+  {
+    "kanji": "妹",
+    "hiragana": "いもうと",
+    "romaji": "imouto",
+    "arti": "(rendah hati) adik perempuan"
+  },
+  {
+    "kanji": "嫌",
+    "hiragana": "いや",
+    "romaji": "iya",
+    "arti": "menyenangkan"
+  },
+  {
+    "kanji": "入口",
+    "hiragana": "いりぐち",
+    "romaji": "iriguchi",
+    "arti": "jalan masuk"
+  },
+  {
+    "kanji": "居る",
+    "hiragana": "いる",
+    "romaji": "iru",
+    "arti": "menjadi, telah (digunakan untuk orang dan hewan)"
+  },
+  {
+    "kanji": "要る",
+    "hiragana": "いる",
+    "romaji": "iru",
+    "arti": "membutuhkan"
+  },
+  {
+    "kanji": "入れる",
+    "hiragana": "いれる",
+    "romaji": "ireru",
+    "arti": "untuk dimasukkan ke dalam"
+  },
+  {
+    "kanji": "色",
+    "hiragana": "いろ",
+    "romaji": "iro",
+    "arti": "warna"
+  },
+  {
+    "kanji": null,
+    "hiragana": "いろいろ",
+    "romaji": "iroiro",
+    "arti": "berbagai"
+  },
+  {
+    "kanji": "上",
+    "hiragana": "うえ",
+    "romaji": "ue",
+    "arti": "diatas dari"
+  },
+  {
+    "kanji": "後ろ",
+    "hiragana": "うしろ",
+    "romaji": "ushiro",
+    "arti": "dibelakang"
+  },
+  {
+    "kanji": "薄い",
+    "hiragana": "うすい",
+    "romaji": "usui",
+    "arti": "kurus, lemah"
+  },
+  {
+    "kanji": "歌",
+    "hiragana": "うた",
+    "romaji": "uta",
+    "arti": "lagu"
+  },
+  {
+    "kanji": "歌う",
+    "hiragana": "うたう",
+    "romaji": "utau",
+    "arti": "menyanyikan"
+  },
+  {
+    "kanji": "生まれる",
+    "hiragana": "うまれる",
+    "romaji": "umareru",
+    "arti": "dilahirkan"
+  },
+  {
+    "kanji": "海",
+    "hiragana": "うみ",
+    "romaji": "umi",
+    "arti": "laut"
+  },
+  {
+    "kanji": "売る",
+    "hiragana": "うる",
+    "romaji": "uru",
+    "arti": "untuk menjual"
+  },
+  {
+    "kanji": "煩い",
+    "hiragana": "うるさい",
+    "romaji": "urusai",
+    "arti": "berisik, mengganggu"
+  },
+  {
+    "kanji": "上着",
+    "hiragana": "うわぎ",
+    "romaji": "uwagi",
+    "arti": "jaket"
+  },
+  {
+    "kanji": "絵",
+    "hiragana": "え",
+    "romaji": "e",
+    "arti": "gambar"
+  },
+  {
+    "kanji": "映画",
+    "hiragana": "えいが",
+    "romaji": "eiga",
+    "arti": "film"
+  },
+  {
+    "kanji": "映画館",
+    "hiragana": "えいがかん",
+    "romaji": "eigakan",
+    "arti": "bioskop"
+  },
+  {
+    "kanji": "英語",
+    "hiragana": "えいご",
+    "romaji": "eigo",
+    "arti": "bahasa Inggris"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ええ",
+    "romaji": "ee",
+    "arti": "iya nih"
+  },
+  {
+    "kanji": "駅",
+    "hiragana": "えき",
+    "romaji": "eki",
+    "arti": "stasiun"
+  },
+  {
+    "kanji": null,
+    "hiragana": "エレベーター",
+    "romaji": "erebe ta",
+    "arti": "lift"
+  },
+  {
+    "kanji": "鉛筆",
+    "hiragana": "えんぴつ",
+    "romaji": "enpitsu",
+    "arti": "pensil"
+  },
+  {
+    "kanji": null,
+    "hiragana": "おいしい",
+    "romaji": "oishii",
+    "arti": "lezat"
+  },
+  {
+    "kanji": "多い",
+    "hiragana": "おおい",
+    "romaji": "ooi",
+    "arti": "banyak"
+  },
+  {
+    "kanji": "大きい",
+    "hiragana": "おおきい",
+    "romaji": "ookii",
+    "arti": "besar"
+  },
+  {
+    "kanji": "大きな",
+    "hiragana": "おおきな",
+    "romaji": "ookina",
+    "arti": "besar"
+  },
+  {
+    "kanji": "大勢",
+    "hiragana": "おおぜい",
+    "romaji": "oozei",
+    "arti": "sejumlah besar orang"
+  },
+  {
+    "kanji": "お母さん",
+    "hiragana": "おかあさん",
+    "romaji": "okaasan",
+    "arti": "(terhormat) ibu"
+  },
+  {
+    "kanji": "お菓子",
+    "hiragana": "おかし",
+    "romaji": "okashi",
+    "arti": "permen, permen"
+  },
+  {
+    "kanji": "お金",
+    "hiragana": "おかね",
+    "romaji": "okane",
+    "arti": "uang"
+  },
+  {
+    "kanji": "起きる",
+    "hiragana": "おきる",
+    "romaji": "okiru",
+    "arti": "untuk bangun"
+  },
+  {
+    "kanji": "置く",
+    "hiragana": "おく",
+    "romaji": "oku",
+    "arti": "untuk menempatkan"
+  },
+  {
+    "kanji": "奥さん",
+    "hiragana": "おくさん",
+    "romaji": "okusan",
+    "arti": "(terhormat) istri"
+  },
+  {
+    "kanji": "お酒",
+    "hiragana": "おさけ",
+    "romaji": "osake",
+    "arti": "alkohol, anggur beras"
+  },
+  {
+    "kanji": "お皿",
+    "hiragana": "おさら",
+    "romaji": "osara",
+    "arti": "piring, hidangan"
+  },
+  {
+    "kanji": "伯父/叔父",
+    "hiragana": "おじいさん",
+    "romaji": "ojiisan",
+    "arti": "Kakek, warga senior laki-laki"
+  },
+  {
+    "kanji": "教える",
+    "hiragana": "おしえる",
+    "romaji": "oshieru",
+    "arti": "untuk mengajar, untuk memberitahu"
+  },
+  {
+    "kanji": "伯父/叔父",
+    "hiragana": "おじさん",
+    "romaji": "ojisan",
+    "arti": "paman, pria paruh baya"
+  },
+  {
+    "kanji": "押す",
+    "hiragana": "おす",
+    "romaji": "osu",
+    "arti": "untuk mendorong, untuk cap sesuatu"
+  },
+  {
+    "kanji": "遅い",
+    "hiragana": "おそい",
+    "romaji": "osoi",
+    "arti": "terlambat, lambat"
+  },
+  {
+    "kanji": "お茶",
+    "hiragana": "おちゃ",
+    "romaji": "ocha",
+    "arti": "teh hijau"
+  },
+  {
+    "kanji": "お手洗い",
+    "hiragana": "おてあらい",
+    "romaji": "otearai",
+    "arti": "kamar mandi"
+  },
+  {
+    "kanji": "お父さん",
+    "hiragana": "おとうさん",
+    "romaji": "otousan",
+    "arti": "(terhormat) ayah"
+  },
+  {
+    "kanji": "弟",
+    "hiragana": "おとうと",
+    "romaji": "otouto",
+    "arti": "adik laki-laki"
+  },
+  {
+    "kanji": "男",
+    "hiragana": "おとこ",
+    "romaji": "otoko",
+    "arti": "manusia"
+  },
+  {
+    "kanji": "男の子",
+    "hiragana": "おとこのこ",
+    "romaji": "otokonoko",
+    "arti": "anak laki-laki"
+  },
+  {
+    "kanji": "一昨日",
+    "hiragana": "おととい",
+    "romaji": "ototoi",
+    "arti": "hari sebelum kemarin"
+  },
+  {
+    "kanji": "一昨年",
+    "hiragana": "おととし",
+    "romaji": "ototoshi",
+    "arti": "tahun sebelum terakhir"
+  },
+  {
+    "kanji": "大人",
+    "hiragana": "おとな",
+    "romaji": "otona",
+    "arti": "dewasa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "おなか",
+    "romaji": "onaka",
+    "arti": "perut"
+  },
+  {
+    "kanji": "同じ",
+    "hiragana": "おなじ",
+    "romaji": "onaji",
+    "arti": "sama"
+  },
+  {
+    "kanji": "お兄さん",
+    "hiragana": "おにいさん",
+    "romaji": "oniisan",
+    "arti": "(terhormat) kakak"
+  },
+  {
+    "kanji": "お姉さん",
+    "hiragana": "おねえさん",
+    "romaji": "oneesan",
+    "arti": "(terhormat) kakak perempuan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "おばあさん",
+    "romaji": "obaasan",
+    "arti": "Nenek, perempuan manula"
+  },
+  {
+    "kanji": "伯母さん/叔母さん",
+    "hiragana": "おばさん",
+    "romaji": "obasan",
+    "arti": "bibi"
+  },
+  {
+    "kanji": "お風呂",
+    "hiragana": "おふろ",
+    "romaji": "ofuro",
+    "arti": "mandi"
+  },
+  {
+    "kanji": "お弁当",
+    "hiragana": "おべんとう",
+    "romaji": "obentou",
+    "arti": "kotak makan siang"
+  },
+  {
+    "kanji": "覚える",
+    "hiragana": "おぼえる",
+    "romaji": "oboeru",
+    "arti": "untuk mengingat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "おまわりさん",
+    "romaji": "omawarisan",
+    "arti": "Istilah ramah untuk polisi"
+  },
+  {
+    "kanji": "重い",
+    "hiragana": "おもい",
+    "romaji": "omoi",
+    "arti": "berat"
+  },
+  {
+    "kanji": "面白い",
+    "hiragana": "おもしろい",
+    "romaji": "omoshiroi",
+    "arti": "menarik"
+  },
+  {
+    "kanji": "泳ぐ",
+    "hiragana": "およぐ",
+    "romaji": "oyogu",
+    "arti": "berenang"
+  },
+  {
+    "kanji": "降りる",
+    "hiragana": "おりる",
+    "romaji": "oriru",
+    "arti": "untuk turun, turun"
+  },
+  {
+    "kanji": "終る",
+    "hiragana": "おわる",
+    "romaji": "owaru",
+    "arti": "menyelesaikan"
+  },
+  {
+    "kanji": "音楽",
+    "hiragana": "おんがく",
+    "romaji": "ongaku",
+    "arti": "musik"
+  },
+  {
+    "kanji": "女",
+    "hiragana": "おんな",
+    "romaji": "onna",
+    "arti": "wanita"
+  },
+  {
+    "kanji": "女の子",
+    "hiragana": "おんなのこ",
+    "romaji": "onnanoko",
+    "arti": "gadis"
+  },
+  {
+    "kanji": "外国",
+    "hiragana": "がいこく",
+    "romaji": "gaikoku",
+    "arti": "negara asing"
+  },
+  {
+    "kanji": "外国人",
+    "hiragana": "がいこくじん",
+    "romaji": "gaikokujin",
+    "arti": "orang asing"
+  },
+  {
+    "kanji": "会社",
+    "hiragana": "かいしゃ",
+    "romaji": "kaisha",
+    "arti": "perusahaan"
+  },
+  {
+    "kanji": "階段",
+    "hiragana": "かいだん",
+    "romaji": "kaidan",
+    "arti": "tangga"
+  },
+  {
+    "kanji": "買い物",
+    "hiragana": "かいもの",
+    "romaji": "kaimono",
+    "arti": "perbelanjaan"
+  },
+  {
+    "kanji": "買う",
+    "hiragana": "かう",
+    "romaji": "kau",
+    "arti": "untuk membeli"
+  },
+  {
+    "kanji": "返す",
+    "hiragana": "かえす",
+    "romaji": "kaesu",
+    "arti": "untuk kembali sesuatu"
+  },
+  {
+    "kanji": "帰る",
+    "hiragana": "かえる",
+    "romaji": "kaeru",
+    "arti": "untuk kembali"
+  },
+  {
+    "kanji": null,
+    "hiragana": "かかる",
+    "romaji": "kakaru",
+    "arti": "untuk mengambil waktu atau uang"
+  },
+  {
+    "kanji": null,
+    "hiragana": "かぎ",
+    "romaji": "kagi",
+    "arti": "kunci"
+  },
+  {
+    "kanji": "書く",
+    "hiragana": "かく",
+    "romaji": "kaku",
+    "arti": "untuk menulis"
+  },
+  {
+    "kanji": "学生",
+    "hiragana": "がくせい",
+    "romaji": "gakusei",
+    "arti": "mahasiswa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "かける",
+    "romaji": "kakeru",
+    "arti": "menelepon melalui telepon"
+  },
+  {
+    "kanji": "傘",
+    "hiragana": "かさ",
+    "romaji": "kasa",
+    "arti": "payung"
+  },
+  {
+    "kanji": "貸す",
+    "hiragana": "かす",
+    "romaji": "kasu",
+    "arti": "untuk meminjamkan"
+  },
+  {
+    "kanji": "風",
+    "hiragana": "かぜ",
+    "romaji": "kaze",
+    "arti": "angin"
+  },
+  {
+    "kanji": "風邪",
+    "hiragana": "かぜ",
+    "romaji": "kaze",
+    "arti": "flu"
+  },
+  {
+    "kanji": "家族",
+    "hiragana": "かぞく",
+    "romaji": "kazoku",
+    "arti": "keluarga"
+  },
+  {
+    "kanji": "方",
+    "hiragana": "かた",
+    "romaji": "kata",
+    "arti": "orang, cara melakukan"
+  },
+  {
+    "kanji": "学校",
+    "hiragana": "がっこう",
+    "romaji": "gakkou",
+    "arti": "sekolah"
+  },
+  {
+    "kanji": null,
+    "hiragana": "カップ",
+    "romaji": "kappu",
+    "arti": "cangkir"
+  },
+  {
+    "kanji": "家庭",
+    "hiragana": "かてい",
+    "romaji": "katei",
+    "arti": "rumah tangga"
+  },
+  {
+    "kanji": "角",
+    "hiragana": "かど",
+    "romaji": "kado",
+    "arti": "sebuah sudut"
+  },
+  {
+    "kanji": null,
+    "hiragana": "かばん",
+    "romaji": "kaban",
+    "arti": "tas, keranjang"
+  },
+  {
+    "kanji": "花瓶",
+    "hiragana": "かびん",
+    "romaji": "kabin",
+    "arti": "sebuah vas"
+  },
+  {
+    "kanji": "紙",
+    "hiragana": "かみ",
+    "romaji": "kami",
+    "arti": "kertas"
+  },
+  {
+    "kanji": null,
+    "hiragana": "カメラ",
+    "romaji": "kamera",
+    "arti": "kamera"
+  },
+  {
+    "kanji": "火曜日",
+    "hiragana": "かようび",
+    "romaji": "kayoubi",
+    "arti": "Selasa"
+  },
+  {
+    "kanji": "辛い",
+    "hiragana": "からい",
+    "romaji": "karai",
+    "arti": "pedas"
+  },
+  {
+    "kanji": "体",
+    "hiragana": "からだ",
+    "romaji": "karada",
+    "arti": "tubuh"
+  },
+  {
+    "kanji": "借りる",
+    "hiragana": "かりる",
+    "romaji": "kariru",
+    "arti": "meminjam"
+  },
+  {
+    "kanji": "軽い",
+    "hiragana": "かるい",
+    "romaji": "karui",
+    "arti": "cahaya"
+  },
+  {
+    "kanji": null,
+    "hiragana": "カレー",
+    "romaji": "kare",
+    "arti": "kari"
+  },
+  {
+    "kanji": null,
+    "hiragana": "カレンダー",
+    "romaji": "karenda",
+    "arti": "kalender"
+  },
+  {
+    "kanji": "川/河",
+    "hiragana": "かわ",
+    "romaji": "kawa",
+    "arti": "sungai"
+  },
+  {
+    "kanji": "可愛い",
+    "hiragana": "かわいい",
+    "romaji": "kawaii",
+    "arti": "imut"
+  },
+  {
+    "kanji": "漢字",
+    "hiragana": "かんじ",
+    "romaji": "kanji",
+    "arti": "karakter Cina"
+  },
+  {
+    "kanji": "木",
+    "hiragana": "き",
+    "romaji": "ki",
+    "arti": "pohon, kayu"
+  },
+  {
+    "kanji": "黄色",
+    "hiragana": "きいろ",
+    "romaji": "kiiro",
+    "arti": "kuning"
+  },
+  {
+    "kanji": "黄色い",
+    "hiragana": "きいろい",
+    "romaji": "kiiroi",
+    "arti": "kuning"
+  },
+  {
+    "kanji": "消える",
+    "hiragana": "きえる",
+    "romaji": "kieru",
+    "arti": "menghilang"
+  },
+  {
+    "kanji": "聞く",
+    "hiragana": "きく",
+    "romaji": "kiku",
+    "arti": "untuk mendengar, untuk mendengarkan, untuk meminta"
+  },
+  {
+    "kanji": "北",
+    "hiragana": "きた",
+    "romaji": "kita",
+    "arti": "utara"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ギター",
+    "romaji": "gita",
+    "arti": "gitar"
+  },
+  {
+    "kanji": "汚い",
+    "hiragana": "きたない",
+    "romaji": "kitanai",
+    "arti": "kotor"
+  },
+  {
+    "kanji": "喫茶店",
+    "hiragana": "きっさてん",
+    "romaji": "kissaten",
+    "arti": "coffee lounge"
+  },
+  {
+    "kanji": "切手",
+    "hiragana": "きって",
+    "romaji": "kitte",
+    "arti": "perangko"
+  },
+  {
+    "kanji": "切符",
+    "hiragana": "きっぷ",
+    "romaji": "kippu",
+    "arti": "tiket"
+  },
+  {
+    "kanji": "昨日",
+    "hiragana": "きのう",
+    "romaji": "kinou",
+    "arti": "kemarin"
+  },
+  {
+    "kanji": "九",
+    "hiragana": "きゅう/く",
+    "romaji": "kyuu/ku",
+    "arti": "sembilan"
+  },
+  {
+    "kanji": "牛肉",
+    "hiragana": "ぎゅうにく",
+    "romaji": "gyuuniku",
+    "arti": "daging sapi"
+  },
+  {
+    "kanji": "牛乳",
+    "hiragana": "ぎゅうにゅう",
+    "romaji": "gyuunyuu",
+    "arti": "susu"
+  },
+  {
+    "kanji": "今日",
+    "hiragana": "きょう",
+    "romaji": "kyou",
+    "arti": "hari ini"
+  },
+  {
+    "kanji": "教室",
+    "hiragana": "きょうしつ",
+    "romaji": "kyoushitsu",
+    "arti": "kelas"
+  },
+  {
+    "kanji": "兄弟",
+    "hiragana": "きょうだい",
+    "romaji": "kyoudai",
+    "arti": "(rendah hati) saudara"
+  },
+  {
+    "kanji": "去年",
+    "hiragana": "きょねん",
+    "romaji": "kyonen",
+    "arti": "tahun lalu"
+  },
+  {
+    "kanji": "嫌い",
+    "hiragana": "きらい",
+    "romaji": "kirai",
+    "arti": "benci"
+  },
+  {
+    "kanji": "切る",
+    "hiragana": "きる",
+    "romaji": "kiru",
+    "arti": "untuk memotong"
+  },
+  {
+    "kanji": "着る",
+    "hiragana": "きる",
+    "romaji": "kiru",
+    "arti": "untuk mengenakan dari bahu bawah"
+  },
+  {
+    "kanji": null,
+    "hiragana": "きれい",
+    "romaji": "kirei",
+    "arti": "cantik, bersih"
+  },
+  {
+    "kanji": null,
+    "hiragana": "キロ/キログラム",
+    "romaji": "kiro/kiroguramu",
+    "arti": "kilogram"
+  },
+  {
+    "kanji": null,
+    "hiragana": "キロ/キロメートル",
+    "romaji": "kiro/kirometoru",
+    "arti": "kilometer"
+  },
+  {
+    "kanji": "銀行",
+    "hiragana": "ぎんこう",
+    "romaji": "ginkou",
+    "arti": "bank"
+  },
+  {
+    "kanji": "金曜日",
+    "hiragana": "きんようび",
+    "romaji": "kinyoubi",
+    "arti": "Jumat"
+  },
+  {
+    "kanji": "薬",
+    "hiragana": "くすり",
+    "romaji": "kusuri",
+    "arti": "obat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ください",
+    "romaji": "kudasai",
+    "arti": "silahkan"
+  },
+  {
+    "kanji": "果物",
+    "hiragana": "くだもの",
+    "romaji": "kudamono",
+    "arti": "buah"
+  },
+  {
+    "kanji": "口",
+    "hiragana": "くち",
+    "romaji": "kuchi",
+    "arti": "mulut, pembukaan"
+  },
+  {
+    "kanji": "靴",
+    "hiragana": "くつ",
+    "romaji": "kutsu",
+    "arti": "sepatu"
+  },
+  {
+    "kanji": "靴下",
+    "hiragana": "くつした",
+    "romaji": "kutsushita",
+    "arti": "kaus kaki"
+  },
+  {
+    "kanji": "国",
+    "hiragana": "くに",
+    "romaji": "kuni",
+    "arti": "negara"
+  },
+  {
+    "kanji": "曇り",
+    "hiragana": "くもり",
+    "romaji": "kumori",
+    "arti": "cuaca berawan"
+  },
+  {
+    "kanji": "曇る",
+    "hiragana": "くもる",
+    "romaji": "kumoru",
+    "arti": "menjadi berawan, untuk menjadi redup"
+  },
+  {
+    "kanji": "暗い",
+    "hiragana": "くらい",
+    "romaji": "kurai",
+    "arti": "suram"
+  },
+  {
+    "kanji": null,
+    "hiragana": "クラス",
+    "romaji": "kurasu",
+    "arti": "kelas"
+  },
+  {
+    "kanji": null,
+    "hiragana": "グラム",
+    "romaji": "guramu",
+    "arti": "gram"
+  },
+  {
+    "kanji": "来る",
+    "hiragana": "くる",
+    "romaji": "kuru",
+    "arti": "datang"
+  },
+  {
+    "kanji": "車",
+    "hiragana": "くるま",
+    "romaji": "kuruma",
+    "arti": "mobil, kendaraan"
+  },
+  {
+    "kanji": "黒",
+    "hiragana": "くろ",
+    "romaji": "kuro",
+    "arti": "hitam"
+  },
+  {
+    "kanji": "黒い",
+    "hiragana": "くろい",
+    "romaji": "kuroi",
+    "arti": "hitam"
+  },
+  {
+    "kanji": "警官",
+    "hiragana": "けいかん",
+    "romaji": "keikan",
+    "arti": "polisi"
+  },
+  {
+    "kanji": "今朝",
+    "hiragana": "けさ",
+    "romaji": "kesa",
+    "arti": "pagi ini"
+  },
+  {
+    "kanji": "消す",
+    "hiragana": "けす",
+    "romaji": "kesu",
+    "arti": "untuk menghapus, untuk mematikan listrik"
+  },
+  {
+    "kanji": "結構",
+    "hiragana": "けっこう",
+    "romaji": "kekkou",
+    "arti": "indah, cukup"
+  },
+  {
+    "kanji": "結婚",
+    "hiragana": "けっこん",
+    "romaji": "kekkon",
+    "arti": "pernikahan"
+  },
+  {
+    "kanji": "月曜日",
+    "hiragana": "げつようび",
+    "romaji": "getsuyoubi",
+    "arti": "Senin"
+  },
+  {
+    "kanji": "玄関",
+    "hiragana": "げんかん",
+    "romaji": "genkan",
+    "arti": "entri aula"
+  },
+  {
+    "kanji": "元気",
+    "hiragana": "げんき",
+    "romaji": "genki",
+    "arti": "kesehatan, vitalitas"
+  },
+  {
+    "kanji": "五",
+    "hiragana": "ご",
+    "romaji": "go",
+    "arti": "lima"
+  },
+  {
+    "kanji": "公園",
+    "hiragana": "こうえん",
+    "romaji": "kouen",
+    "arti": "taman"
+  },
+  {
+    "kanji": "交差点",
+    "hiragana": "こうさてん",
+    "romaji": "kousaten",
+    "arti": "persimpangan"
+  },
+  {
+    "kanji": "紅茶",
+    "hiragana": "こうちゃ",
+    "romaji": "koucha",
+    "arti": "teh hitam"
+  },
+  {
+    "kanji": "交番",
+    "hiragana": "こうばん",
+    "romaji": "kouban",
+    "arti": "box polisi"
+  },
+  {
+    "kanji": "声",
+    "hiragana": "こえ",
+    "romaji": "koe",
+    "arti": "suara"
+  },
+  {
+    "kanji": null,
+    "hiragana": "コート",
+    "romaji": "ko-to",
+    "arti": "mantel, lapangan tenis"
+  },
+  {
+    "kanji": null,
+    "hiragana": "コーヒー",
+    "romaji": "ko-hi",
+    "arti": "kopi"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ここ",
+    "romaji": "koko",
+    "arti": "sini"
+  },
+  {
+    "kanji": "午後",
+    "hiragana": "ごご",
+    "romaji": "gogo",
+    "arti": "sore"
+  },
+  {
+    "kanji": "九日",
+    "hiragana": "ここのか",
+    "romaji": "kokonoka",
+    "arti": "sembilan hari, hari kesembilan"
+  },
+  {
+    "kanji": "九つ",
+    "hiragana": "ここのつ",
+    "romaji": "kokonotsu",
+    "arti": "sembilan"
+  },
+  {
+    "kanji": "午前",
+    "hiragana": "ごぜん",
+    "romaji": "gozen",
+    "arti": "pagi"
+  },
+  {
+    "kanji": "答える",
+    "hiragana": "こたえる",
+    "romaji": "kotaeru",
+    "arti": "untuk menjawab"
+  },
+  {
+    "kanji": null,
+    "hiragana": "こちら",
+    "romaji": "kochira",
+    "arti": "orang ini atau cara"
+  },
+  {
+    "kanji": null,
+    "hiragana": "こっち",
+    "romaji": "kocchi",
+    "arti": "orang ini atau cara"
+  },
+  {
+    "kanji": null,
+    "hiragana": "コップ",
+    "romaji": "koppu",
+    "arti": "gelas"
+  },
+  {
+    "kanji": "今年",
+    "hiragana": "ことし",
+    "romaji": "kotoshi",
+    "arti": "tahun ini"
+  },
+  {
+    "kanji": "言葉",
+    "hiragana": "ことば",
+    "romaji": "kotoba",
+    "arti": "kata, bahasa"
+  },
+  {
+    "kanji": "子供",
+    "hiragana": "こども",
+    "romaji": "kodomo",
+    "arti": "anak"
+  },
+  {
+    "kanji": null,
+    "hiragana": "この",
+    "romaji": "kono",
+    "arti": "ini"
+  },
+  {
+    "kanji": "御飯",
+    "hiragana": "ごはん",
+    "romaji": "gohan",
+    "arti": "nasi, makan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "コピーする",
+    "romaji": "kopisuru",
+    "arti": "untuk menyalin"
+  },
+  {
+    "kanji": "困る",
+    "hiragana": "こまる",
+    "romaji": "komaru",
+    "arti": "menjadi khawatir"
+  },
+  {
+    "kanji": null,
+    "hiragana": "これ",
+    "romaji": "kore",
+    "arti": "ini"
+  },
+  {
+    "kanji": "今月",
+    "hiragana": "こんげつ",
+    "romaji": "kongetsu",
+    "arti": "bulan ini"
+  },
+  {
+    "kanji": "今週",
+    "hiragana": "こんしゅう",
+    "romaji": "konshuu",
+    "arti": "minggu ini"
+  },
+  {
+    "kanji": null,
+    "hiragana": "こんな",
+    "romaji": "konna",
+    "arti": "seperti itu"
+  },
+  {
+    "kanji": "今晚",
+    "hiragana": "こんばん",
+    "romaji": "konban",
+    "arti": "malam ini"
+  },
+  {
+    "kanji": null,
+    "hiragana": "さあ",
+    "romaji": "saa",
+    "arti": "baik..."
+  },
+  {
+    "kanji": "財布",
+    "hiragana": "さいふ",
+    "romaji": "saifu",
+    "arti": "dompet"
+  },
+  {
+    "kanji": "魚",
+    "hiragana": "さかな",
+    "romaji": "sakana",
+    "arti": "ikan"
+  },
+  {
+    "kanji": "先",
+    "hiragana": "さき",
+    "romaji": "saki",
+    "arti": "masa depan, sebelumnya"
+  },
+  {
+    "kanji": "咲く",
+    "hiragana": "さく",
+    "romaji": "saku",
+    "arti": "mekar"
+  },
+  {
+    "kanji": "作文",
+    "hiragana": "さくぶん",
+    "romaji": "sakubun",
+    "arti": "komposisi, menulis"
+  },
+  {
+    "kanji": "差す",
+    "hiragana": "さす",
+    "romaji": "sasu",
+    "arti": "untuk mengulurkan tangan, mengangkat payung"
+  },
+  {
+    "kanji": "雜誌",
+    "hiragana": "ざっし",
+    "romaji": "zasshi",
+    "arti": "majalah"
+  },
+  {
+    "kanji": "砂糖",
+    "hiragana": "さとう",
+    "romaji": "satou",
+    "arti": "Gula"
+  },
+  {
+    "kanji": "寒い",
+    "hiragana": "さむい",
+    "romaji": "samui",
+    "arti": "dingin"
+  },
+  {
+    "kanji": "さ来年",
+    "hiragana": "さらいねん",
+    "romaji": "sarainen",
+    "arti": "tahun setelah berikutnya"
+  },
+  {
+    "kanji": "三",
+    "hiragana": "さん",
+    "romaji": "san",
+    "arti": "tiga"
+  },
+  {
+    "kanji": "散歩",
+    "hiragana": "さんぽする",
+    "romaji": "sanposuru",
+    "arti": "untuk berjalan-jalan"
+  },
+  {
+    "kanji": "四",
+    "hiragana": "し/よん",
+    "romaji": "shi/yon",
+    "arti": "empat"
+  },
+  {
+    "kanji": "塩",
+    "hiragana": "しお",
+    "romaji": "shio",
+    "arti": "garam"
+  },
+  {
+    "kanji": null,
+    "hiragana": "しかし",
+    "romaji": "shikashi",
+    "arti": "namun"
+  },
+  {
+    "kanji": "時間",
+    "hiragana": "じかん",
+    "romaji": "jikan",
+    "arti": "waktu"
+  },
+  {
+    "kanji": "仕事",
+    "hiragana": "しごと",
+    "romaji": "shigoto",
+    "arti": "pekerjaan"
+  },
+  {
+    "kanji": "辞書",
+    "hiragana": "じしょ",
+    "romaji": "jisho",
+    "arti": "kamus"
+  },
+  {
+    "kanji": "静か",
+    "hiragana": "しずか",
+    "romaji": "shizuka",
+    "arti": "diam"
+  },
+  {
+    "kanji": "下",
+    "hiragana": "した",
+    "romaji": "shita",
+    "arti": "di bawah"
+  },
+  {
+    "kanji": "七",
+    "hiragana": "しち/なな",
+    "romaji": "shichi/nana",
+    "arti": "tujuh"
+  },
+  {
+    "kanji": "質問",
+    "hiragana": "しつもん",
+    "romaji": "shitsumon",
+    "arti": "pertanyaan"
+  },
+  {
+    "kanji": "自転車",
+    "hiragana": "じてんしゃ",
+    "romaji": "jitensha",
+    "arti": "sepeda"
+  },
+  {
+    "kanji": "自動車",
+    "hiragana": "じどうしゃ",
+    "romaji": "jidousha",
+    "arti": "mobil"
+  },
+  {
+    "kanji": "死ぬ",
+    "hiragana": "しぬ",
+    "romaji": "shinu",
+    "arti": "mati"
+  },
+  {
+    "kanji": "字引",
+    "hiragana": "じびき",
+    "romaji": "jibiki",
+    "arti": "kamus"
+  },
+  {
+    "kanji": "自分",
+    "hiragana": "じぶん",
+    "romaji": "jibun",
+    "arti": "diri"
+  },
+  {
+    "kanji": "閉まる",
+    "hiragana": "しまる",
+    "romaji": "shimaru",
+    "arti": "untuk menutup, akan ditutup"
+  },
+  {
+    "kanji": "閉める",
+    "hiragana": "しめる",
+    "romaji": "shimeru",
+    "arti": "untuk menutup sesuatu"
+  },
+  {
+    "kanji": "締める",
+    "hiragana": "しめる",
+    "romaji": "shimeru",
+    "arti": "untuk mengikat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "じゃ/じゃあ",
+    "romaji": "ja/jaa",
+    "arti": "Baiklah kalau begitu..."
+  },
+  {
+    "kanji": "写真",
+    "hiragana": "しゃしん",
+    "romaji": "shashin",
+    "arti": "foto"
+  },
+  {
+    "kanji": null,
+    "hiragana": "シャツ",
+    "romaji": "shatsu",
+    "arti": "kemeja"
+  },
+  {
+    "kanji": null,
+    "hiragana": "シャワー",
+    "romaji": "shawa",
+    "arti": "mandi"
+  },
+  {
+    "kanji": "十",
+    "hiragana": "じゅう/とお",
+    "romaji": "juu/too",
+    "arti": "sepuluh"
+  },
+  {
+    "kanji": "授業",
+    "hiragana": "じゅぎょう",
+    "romaji": "jugyou",
+    "arti": "pelajaran, pekerjaan kelas"
+  },
+  {
+    "kanji": "宿題",
+    "hiragana": "しゅくだい",
+    "romaji": "shukudai",
+    "arti": "pekerjaan rumah"
+  },
+  {
+    "kanji": "上手",
+    "hiragana": "じょうず",
+    "romaji": "jouzu",
+    "arti": "mahir"
+  },
+  {
+    "kanji": "丈夫",
+    "hiragana": "じょうぶ",
+    "romaji": "joubu",
+    "arti": "kuat, tahan lama"
+  },
+  {
+    "kanji": null,
+    "hiragana": "しょうゆ",
+    "romaji": "shouyu",
+    "arti": "kecap"
+  },
+  {
+    "kanji": "食堂",
+    "hiragana": "しょくどう",
+    "romaji": "shokudou",
+    "arti": "ruang makan"
+  },
+  {
+    "kanji": "知る",
+    "hiragana": "しる",
+    "romaji": "shiru",
+    "arti": "untuk mengetahui"
+  },
+  {
+    "kanji": "白",
+    "hiragana": "しろ",
+    "romaji": "shiro",
+    "arti": "putih"
+  },
+  {
+    "kanji": "白い",
+    "hiragana": "しろい",
+    "romaji": "shiroi",
+    "arti": "putih"
+  },
+  {
+    "kanji": "新聞",
+    "hiragana": "しんぶん",
+    "romaji": "shinbun",
+    "arti": "koran"
+  },
+  {
+    "kanji": "水曜日",
+    "hiragana": "すいようび",
+    "romaji": "suiyoubi",
+    "arti": "Rabu"
+  },
+  {
+    "kanji": "吸う",
+    "hiragana": "すう",
+    "romaji": "suu",
+    "arti": "asap, mengisap"
+  },
+  {
+    "kanji": null,
+    "hiragana": "スカート",
+    "romaji": "sukato",
+    "arti": "rok"
+  },
+  {
+    "kanji": "好き",
+    "hiragana": "すき",
+    "romaji": "suki",
+    "arti": "yg menyenangkan"
+  },
+  {
+    "kanji": "少ない",
+    "hiragana": "すくない",
+    "romaji": "sukunai",
+    "arti": "sedikit"
+  },
+  {
+    "kanji": null,
+    "hiragana": "すぐに",
+    "romaji": "suguni",
+    "arti": "segera"
+  },
+  {
+    "kanji": "少し",
+    "hiragana": "すこし",
+    "romaji": "sukoshi",
+    "arti": "beberapa"
+  },
+  {
+    "kanji": "涼しい",
+    "hiragana": "すずしい",
+    "romaji": "suzushii",
+    "arti": "segar"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ストーブ",
+    "romaji": "sutobu",
+    "arti": "pemanas"
+  },
+  {
+    "kanji": null,
+    "hiragana": "スプーン",
+    "romaji": "supun",
+    "arti": "sendok"
+  },
+  {
+    "kanji": null,
+    "hiragana": "スポーツ",
+    "romaji": "supotsu",
+    "arti": "olahraga"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ズボン",
+    "romaji": "zubon",
+    "arti": "celana"
+  },
+  {
+    "kanji": "住む",
+    "hiragana": "すむ",
+    "romaji": "sumu",
+    "arti": "untuk tinggal di"
+  },
+  {
+    "kanji": null,
+    "hiragana": "スリッパ",
+    "romaji": "surippa",
+    "arti": "sandal"
+  },
+  {
+    "kanji": null,
+    "hiragana": "する",
+    "romaji": "suru",
+    "arti": "melakukan"
+  },
+  {
+    "kanji": "座る",
+    "hiragana": "すわる",
+    "romaji": "suwaru",
+    "arti": "duduk"
+  },
+  {
+    "kanji": "背",
+    "hiragana": "せ",
+    "romaji": "se",
+    "arti": "tinggi, perawakan"
+  },
+  {
+    "kanji": "生徒",
+    "hiragana": "せいと",
+    "romaji": "seito",
+    "arti": "murid"
+  },
+  {
+    "kanji": null,
+    "hiragana": "セーター",
+    "romaji": "seta",
+    "arti": "sweater, jumper"
+  },
+  {
+    "kanji": null,
+    "hiragana": "せっけん",
+    "romaji": "sekken",
+    "arti": "sabun mandi"
+  },
+  {
+    "kanji": "背広",
+    "hiragana": "せびろ",
+    "romaji": "sebiro",
+    "arti": "setelan jas untuk bekerja"
+  },
+  {
+    "kanji": "狭い",
+    "hiragana": "せまい",
+    "romaji": "semai",
+    "arti": "sempit"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ゼロ",
+    "romaji": "zero",
+    "arti": "nol"
+  },
+  {
+    "kanji": "千",
+    "hiragana": "せん",
+    "romaji": "sen",
+    "arti": "seribu"
+  },
+  {
+    "kanji": "先月",
+    "hiragana": "せんげつ",
+    "romaji": "sengetsu",
+    "arti": "bulan lalu"
+  },
+  {
+    "kanji": "先週",
+    "hiragana": "せんしゅう",
+    "romaji": "senshuu",
+    "arti": "minggu lalu"
+  },
+  {
+    "kanji": "先生",
+    "hiragana": "せんせい",
+    "romaji": "sensei",
+    "arti": "guru, dokter"
+  },
+  {
+    "kanji": "洗濯",
+    "hiragana": "せんたく",
+    "romaji": "sentaku",
+    "arti": "pencucian"
+  },
+  {
+    "kanji": "全部",
+    "hiragana": "ぜんぶ",
+    "romaji": "zenbu",
+    "arti": "semua"
+  },
+  {
+    "kanji": "掃除",
+    "hiragana": "そうじする",
+    "romaji": "soujisuru",
+    "arti": "untuk membersihkan, menyapu"
+  },
+  {
+    "kanji": null,
+    "hiragana": "そうして/そして",
+    "romaji": "soushite/soshite",
+    "arti": "dan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "そこ",
+    "romaji": "soko",
+    "arti": "tempat itu"
+  },
+  {
+    "kanji": null,
+    "hiragana": "そちら",
+    "romaji": "sochira",
+    "arti": "di sana"
+  },
+  {
+    "kanji": null,
+    "hiragana": "そっち",
+    "romaji": "socchi",
+    "arti": "di sana"
+  },
+  {
+    "kanji": "外",
+    "hiragana": "そと",
+    "romaji": "soto",
+    "arti": "di luar"
+  },
+  {
+    "kanji": null,
+    "hiragana": "その",
+    "romaji": "sono",
+    "arti": "bahwa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "そば",
+    "romaji": "soba",
+    "arti": "dekat, di samping"
+  },
+  {
+    "kanji": "空",
+    "hiragana": "そら",
+    "romaji": "sora",
+    "arti": "langit"
+  },
+  {
+    "kanji": null,
+    "hiragana": "それ",
+    "romaji": "sore",
+    "arti": "bahwa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "それから",
+    "romaji": "sorekara",
+    "arti": "setelah itu"
+  },
+  {
+    "kanji": null,
+    "hiragana": "それでは",
+    "romaji": "soredeha",
+    "arti": "dalam situasi yang"
+  },
+  {
+    "kanji": "大学",
+    "hiragana": "だいがく",
+    "romaji": "daigaku",
+    "arti": "Universitas"
+  },
+  {
+    "kanji": "大使館",
+    "hiragana": "たいしかん",
+    "romaji": "taishikan",
+    "arti": "kedutaan"
+  },
+  {
+    "kanji": "大丈夫",
+    "hiragana": "だいじょうぶ",
+    "romaji": "daijoubu",
+    "arti": "Baiklah"
+  },
+  {
+    "kanji": "大好き",
+    "hiragana": "だいすき",
+    "romaji": "daisuki",
+    "arti": "sangat menyenangkan"
+  },
+  {
+    "kanji": "大切",
+    "hiragana": "たいせつ",
+    "romaji": "taisetsu",
+    "arti": "penting"
+  },
+  {
+    "kanji": "台所",
+    "hiragana": "だいどころ",
+    "romaji": "daidokoro",
+    "arti": "dapur"
+  },
+  {
+    "kanji": null,
+    "hiragana": "たいへん",
+    "romaji": "taihen",
+    "arti": "sangat, situasi sulit"
+  },
+  {
+    "kanji": "高い",
+    "hiragana": "たかい",
+    "romaji": "takai",
+    "arti": "tinggi, mahal"
+  },
+  {
+    "kanji": null,
+    "hiragana": "たくさん",
+    "romaji": "takusan",
+    "arti": "banyak"
+  },
+  {
+    "kanji": null,
+    "hiragana": "タクシー",
+    "romaji": "takushi",
+    "arti": "taksi"
+  },
+  {
+    "kanji": "出す",
+    "hiragana": "だす",
+    "romaji": "dasu",
+    "arti": "untuk memadamkan"
+  },
+  {
+    "kanji": "立つ",
+    "hiragana": "たつ",
+    "romaji": "tatsu",
+    "arti": "berdiri"
+  },
+  {
+    "kanji": "建物",
+    "hiragana": "たてもの",
+    "romaji": "tatemono",
+    "arti": "bangunan"
+  },
+  {
+    "kanji": "楽しい",
+    "hiragana": "たのしい",
+    "romaji": "tanoshii",
+    "arti": "nikmat"
+  },
+  {
+    "kanji": "頼む",
+    "hiragana": "たのむ",
+    "romaji": "tanomu",
+    "arti": "untuk bertanya"
+  },
+  {
+    "kanji": null,
+    "hiragana": "たばこ",
+    "romaji": "tabako",
+    "arti": "tembakau, rokok"
+  },
+  {
+    "kanji": null,
+    "hiragana": "たぶん",
+    "romaji": "tabun",
+    "arti": "mungkin"
+  },
+  {
+    "kanji": "食べ物",
+    "hiragana": "たべもの",
+    "romaji": "tabemono",
+    "arti": "makanan"
+  },
+  {
+    "kanji": "食べる",
+    "hiragana": "たべる",
+    "romaji": "taberu",
+    "arti": "Untuk makan"
+  },
+  {
+    "kanji": "卵",
+    "hiragana": "たまご",
+    "romaji": "tamago",
+    "arti": "telur"
+  },
+  {
+    "kanji": "誰",
+    "hiragana": "だれ",
+    "romaji": "dare",
+    "arti": "siapa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "だれか",
+    "romaji": "dareka",
+    "arti": "seseorang"
+  },
+  {
+    "kanji": "誕生日",
+    "hiragana": "たんじょうび",
+    "romaji": "tanjoubi",
+    "arti": "ulang tahun"
+  },
+  {
+    "kanji": null,
+    "hiragana": "だんだん",
+    "romaji": "dandan",
+    "arti": "bertahap"
+  },
+  {
+    "kanji": "小さい",
+    "hiragana": "ちいさい",
+    "romaji": "chiisai",
+    "arti": "sedikit"
+  },
+  {
+    "kanji": "小さな",
+    "hiragana": "ちいさな",
+    "romaji": "chiisana",
+    "arti": "sedikit"
+  },
+  {
+    "kanji": "近い",
+    "hiragana": "ちかい",
+    "romaji": "chikai",
+    "arti": "dekat"
+  },
+  {
+    "kanji": "違う",
+    "hiragana": "ちがう",
+    "romaji": "chigau",
+    "arti": "untuk membedakan"
+  },
+  {
+    "kanji": "近く",
+    "hiragana": "ちかく",
+    "romaji": "chikaku",
+    "arti": "dekat"
+  },
+  {
+    "kanji": "地下鉄",
+    "hiragana": "ちかてつ",
+    "romaji": "chikatetsu",
+    "arti": "kereta bawah tanah"
+  },
+  {
+    "kanji": "地図",
+    "hiragana": "ちず",
+    "romaji": "chizu",
+    "arti": "peta"
+  },
+  {
+    "kanji": "茶色",
+    "hiragana": "ちゃいろ",
+    "romaji": "chairo",
+    "arti": "coklat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ちゃわん",
+    "romaji": "chawan",
+    "arti": "mangkuk nasi"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ちょうど",
+    "romaji": "choudo",
+    "arti": "persis"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ちょっと",
+    "romaji": "chotto",
+    "arti": "agak"
+  },
+  {
+    "kanji": "一日",
+    "hiragana": "ついたち",
+    "romaji": "tsuitachi",
+    "arti": "awal bulan"
+  },
+  {
+    "kanji": "使う",
+    "hiragana": "つかう",
+    "romaji": "tsukau",
+    "arti": "menggunakan"
+  },
+  {
+    "kanji": "疲れる",
+    "hiragana": "つかれる",
+    "romaji": "tsukareru",
+    "arti": "bosan"
+  },
+  {
+    "kanji": "次",
+    "hiragana": "つぎ",
+    "romaji": "tsugi",
+    "arti": "berikutnya"
+  },
+  {
+    "kanji": "着く",
+    "hiragana": "つく",
+    "romaji": "tsuku",
+    "arti": "untuk tiba di"
+  },
+  {
+    "kanji": "机",
+    "hiragana": "つくえ",
+    "romaji": "tsukue",
+    "arti": "meja tulis"
+  },
+  {
+    "kanji": "作る",
+    "hiragana": "つくる",
+    "romaji": "tsukuru",
+    "arti": "untuk membuat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "つける",
+    "romaji": "tsukeru",
+    "arti": "untuk mengaktifkan"
+  },
+  {
+    "kanji": "勤める",
+    "hiragana": "つとめる",
+    "romaji": "tsutomeru",
+    "arti": "bekerja untuk orang"
+  },
+  {
+    "kanji": null,
+    "hiragana": "つまらない",
+    "romaji": "tsumaranai",
+    "arti": "membosankan"
+  },
+  {
+    "kanji": "冷たい",
+    "hiragana": "つめたい",
+    "romaji": "tsumetai",
+    "arti": "dingin dengan sentuhan"
+  },
+  {
+    "kanji": "強い",
+    "hiragana": "つよい",
+    "romaji": "tsuyoi",
+    "arti": "kuasa"
+  },
+  {
+    "kanji": "手",
+    "hiragana": "て",
+    "romaji": "te",
+    "arti": "tangan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "テープ",
+    "romaji": "tepu",
+    "arti": "tape"
+  },
+  {
+    "kanji": null,
+    "hiragana": "テーブル",
+    "romaji": "teburu",
+    "arti": "meja"
+  },
+  {
+    "kanji": null,
+    "hiragana": "テープレコーダー",
+    "romaji": "tepurekoda",
+    "arti": "alat perekam"
+  },
+  {
+    "kanji": "出かける",
+    "hiragana": "でかける",
+    "romaji": "dekakeru",
+    "arti": "untuk pergi keluar"
+  },
+  {
+    "kanji": "手紙",
+    "hiragana": "てがみ",
+    "romaji": "tegami",
+    "arti": "surat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "できる",
+    "romaji": "dekiru",
+    "arti": "agar bisa"
+  },
+  {
+    "kanji": "出口",
+    "hiragana": "でぐち",
+    "romaji": "deguchi",
+    "arti": "keluar"
+  },
+  {
+    "kanji": null,
+    "hiragana": "テスト",
+    "romaji": "tesuto",
+    "arti": "uji"
+  },
+  {
+    "kanji": null,
+    "hiragana": "では",
+    "romaji": "deha",
+    "arti": "dengan itu..."
+  },
+  {
+    "kanji": null,
+    "hiragana": "デパート",
+    "romaji": "depato",
+    "arti": "toko serba ada"
+  },
+  {
+    "kanji": null,
+    "hiragana": "でも",
+    "romaji": "demo",
+    "arti": "tapi"
+  },
+  {
+    "kanji": "出る",
+    "hiragana": "でる",
+    "romaji": "deru",
+    "arti": "muncul, untuk meninggalkan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "テレビ",
+    "romaji": "terebi",
+    "arti": "televisi"
+  },
+  {
+    "kanji": "天気",
+    "hiragana": "てんき",
+    "romaji": "tenki",
+    "arti": "cuaca"
+  },
+  {
+    "kanji": "電気",
+    "hiragana": "でんき",
+    "romaji": "denki",
+    "arti": "listrik, lampu listrik"
+  },
+  {
+    "kanji": "電車",
+    "hiragana": "でんしゃ",
+    "romaji": "densha",
+    "arti": "kereta listrik"
+  },
+  {
+    "kanji": "電話",
+    "hiragana": "でんわ",
+    "romaji": "denwa",
+    "arti": "telepon"
+  },
+  {
+    "kanji": "戶",
+    "hiragana": "と",
+    "romaji": "to",
+    "arti": "Pintu gaya Jepang"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ドア",
+    "romaji": "doa",
+    "arti": "Pintu gaya barat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "トイレ",
+    "romaji": "toire",
+    "arti": "toilet"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どう",
+    "romaji": "dou",
+    "arti": "bagaimana, dengan cara apa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どうして",
+    "romaji": "doushite",
+    "arti": "untuk alasan apa"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どうぞ",
+    "romaji": "douzo",
+    "arti": "silahkan"
+  },
+  {
+    "kanji": "動物",
+    "hiragana": "どうぶつ",
+    "romaji": "doubutsu",
+    "arti": "hewan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どうも",
+    "romaji": "doumo",
+    "arti": "Terima kasih"
+  },
+  {
+    "kanji": "遠い",
+    "hiragana": "とおい",
+    "romaji": "tooi",
+    "arti": "jauh"
+  },
+  {
+    "kanji": "十日",
+    "hiragana": "とおか",
+    "romaji": "tooka",
+    "arti": "sepuluh hari, hari kesembilan"
+  },
+  {
+    "kanji": "時々",
+    "hiragana": "ときどき",
+    "romaji": "tokidoki",
+    "arti": "terkadang"
+  },
+  {
+    "kanji": "時計",
+    "hiragana": "とけい",
+    "romaji": "tokei",
+    "arti": "menonton, jam"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どこ",
+    "romaji": "doko",
+    "arti": "dimana"
+  },
+  {
+    "kanji": "所",
+    "hiragana": "ところ",
+    "romaji": "tokoro",
+    "arti": "tempat"
+  },
+  {
+    "kanji": "年",
+    "hiragana": "とし",
+    "romaji": "toshi",
+    "arti": "tahun"
+  },
+  {
+    "kanji": "図書館",
+    "hiragana": "としょかん",
+    "romaji": "toshokan",
+    "arti": "Perpustakaan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どちら",
+    "romaji": "dochira",
+    "arti": "yang dua"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どっち",
+    "romaji": "docchi",
+    "arti": "yang"
+  },
+  {
+    "kanji": null,
+    "hiragana": "とても",
+    "romaji": "totemo",
+    "arti": "sangat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どなた",
+    "romaji": "donata",
+    "arti": "siapa"
+  },
+  {
+    "kanji": "隣",
+    "hiragana": "となり",
+    "romaji": "tonari",
+    "arti": "sebelah"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どの",
+    "romaji": "dono",
+    "arti": "yang"
+  },
+  {
+    "kanji": "飛ぶ",
+    "hiragana": "とぶ",
+    "romaji": "tobu",
+    "arti": "untuk terbang, melompat"
+  },
+  {
+    "kanji": "止まる",
+    "hiragana": "とまる",
+    "romaji": "tomaru",
+    "arti": "untuk datang ke berhenti"
+  },
+  {
+    "kanji": "友達",
+    "hiragana": "ともだち",
+    "romaji": "tomodachi",
+    "arti": "teman"
+  },
+  {
+    "kanji": "土曜日",
+    "hiragana": "どようび",
+    "romaji": "doyoubi",
+    "arti": "Sabtu"
+  },
+  {
+    "kanji": "鳥",
+    "hiragana": "とり",
+    "romaji": "tori",
+    "arti": "burung"
+  },
+  {
+    "kanji": "とり肉",
+    "hiragana": "とりにく",
+    "romaji": "toriniku",
+    "arti": "daging ayam"
+  },
+  {
+    "kanji": "取る",
+    "hiragana": "とる",
+    "romaji": "toru",
+    "arti": "untuk mengambil sesuatu"
+  },
+  {
+    "kanji": "撮る",
+    "hiragana": "とる",
+    "romaji": "toru",
+    "arti": "untuk mengambil foto atau merekam film"
+  },
+  {
+    "kanji": null,
+    "hiragana": "どれ",
+    "romaji": "dore",
+    "arti": "yang (tiga atau lebih)"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ナイフ",
+    "romaji": "naifu",
+    "arti": "pisau"
+  },
+  {
+    "kanji": "中",
+    "hiragana": "なか",
+    "romaji": "naka",
+    "arti": "tengah"
+  },
+  {
+    "kanji": "長い",
+    "hiragana": "ながい",
+    "romaji": "nagai",
+    "arti": "panjang"
+  },
+  {
+    "kanji": "鳴く",
+    "hiragana": "なく",
+    "romaji": "naku",
+    "arti": "kebisingan hewan, berkicau, suara gemuruh"
+  },
+  {
+    "kanji": "無くす",
+    "hiragana": "なくす",
+    "romaji": "nakusu",
+    "arti": "kehilangan sesuatu"
+  },
+  {
+    "kanji": null,
+    "hiragana": "なぜ",
+    "romaji": "naze",
+    "arti": "Mengapa"
+  },
+  {
+    "kanji": "夏",
+    "hiragana": "なつ",
+    "romaji": "natsu",
+    "arti": "musim panas"
+  },
+  {
+    "kanji": "夏休み",
+    "hiragana": "なつやすみ",
+    "romaji": "natsuyasumi",
+    "arti": "liburan musim panas"
+  },
+  {
+    "kanji": null,
+    "hiragana": "など",
+    "romaji": "nado",
+    "arti": "et cetera"
+  },
+  {
+    "kanji": "七つ",
+    "hiragana": "ななつ",
+    "romaji": "nanatsu",
+    "arti": "tujuh"
+  },
+  {
+    "kanji": "七日",
+    "hiragana": "なのか",
+    "romaji": "nanoka",
+    "arti": "tujuh hari, hari ketujuh"
+  },
+  {
+    "kanji": "名前",
+    "hiragana": "なまえ",
+    "romaji": "namae",
+    "arti": "nama"
+  },
+  {
+    "kanji": "習う",
+    "hiragana": "ならう",
+    "romaji": "narau",
+    "arti": "mempelajari"
+  },
+  {
+    "kanji": "並ぶ",
+    "hiragana": "ならぶ",
+    "romaji": "narabu",
+    "arti": "untuk berbaris, untuk berdiri"
+  },
+  {
+    "kanji": "並べる",
+    "hiragana": "ならべる",
+    "romaji": "naraberu",
+    "arti": "untuk berbaris, untuk mengatur"
+  },
+  {
+    "kanji": null,
+    "hiragana": "なる",
+    "romaji": "naru",
+    "arti": "untuk menjadi"
+  },
+  {
+    "kanji": "何",
+    "hiragana": "なん/なに",
+    "romaji": "nan/nani",
+    "arti": "apa"
+  },
+  {
+    "kanji": "二",
+    "hiragana": "に",
+    "romaji": "ni",
+    "arti": "dua"
+  },
+  {
+    "kanji": "賑やか",
+    "hiragana": "にぎやか",
+    "romaji": "nigiyaka",
+    "arti": "ramai, sibuk"
+  },
+  {
+    "kanji": "肉",
+    "hiragana": "にく",
+    "romaji": "niku",
+    "arti": "daging"
+  },
+  {
+    "kanji": "西",
+    "hiragana": "にし",
+    "romaji": "nishi",
+    "arti": "barat"
+  },
+  {
+    "kanji": "日曜日",
+    "hiragana": "にちようび",
+    "romaji": "nichiyoubi",
+    "arti": "Minggu"
+  },
+  {
+    "kanji": "荷物",
+    "hiragana": "にもつ",
+    "romaji": "nimotsu",
+    "arti": "bagasi"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ニュース",
+    "romaji": "nyusu",
+    "arti": "berita"
+  },
+  {
+    "kanji": "庭",
+    "hiragana": "にわ",
+    "romaji": "niwa",
+    "arti": "taman"
+  },
+  {
+    "kanji": "脱ぐ",
+    "hiragana": "ぬぐ",
+    "romaji": "nugu",
+    "arti": "menanggalkan pakaian"
+  },
+  {
+    "kanji": "温い",
+    "hiragana": "ぬるい",
+    "romaji": "nurui",
+    "arti": "Lukas hangat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ネクタイ",
+    "romaji": "nekutai",
+    "arti": "dasi, dasi"
+  },
+  {
+    "kanji": "猫",
+    "hiragana": "ねこ",
+    "romaji": "neko",
+    "arti": "kucing"
+  },
+  {
+    "kanji": "寝る",
+    "hiragana": "ねる",
+    "romaji": "neru",
+    "arti": "untuk pergi ke tempat tidur, tidur"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ノート",
+    "romaji": "noto",
+    "arti": "notebook, buku latihan"
+  },
+  {
+    "kanji": "登る",
+    "hiragana": "のぼる",
+    "romaji": "noboru",
+    "arti": "memanjat"
+  },
+  {
+    "kanji": "飲み物",
+    "hiragana": "のみもの",
+    "romaji": "nomimono",
+    "arti": "minum"
+  },
+  {
+    "kanji": "飲む",
+    "hiragana": "のむ",
+    "romaji": "nomu",
+    "arti": "untuk minum"
+  },
+  {
+    "kanji": "乗る",
+    "hiragana": "のる",
+    "romaji": "noru",
+    "arti": "untuk mendapatkan, naik"
+  },
+  {
+    "kanji": "歯",
+    "hiragana": "は",
+    "romaji": "ha",
+    "arti": "gigi"
+  },
+  {
+    "kanji": null,
+    "hiragana": "パーティー",
+    "romaji": "pati",
+    "arti": "pesta"
+  },
+  {
+    "kanji": null,
+    "hiragana": "はい",
+    "romaji": "hai",
+    "arti": "iya nih"
+  },
+  {
+    "kanji": "灰皿",
+    "hiragana": "はいざら",
+    "romaji": "haizara",
+    "arti": "asbak"
+  },
+  {
+    "kanji": "入る",
+    "hiragana": "はいる",
+    "romaji": "hairu",
+    "arti": "untuk masuk, mengandung"
+  },
+  {
+    "kanji": "葉書",
+    "hiragana": "はがき",
+    "romaji": "hagaki",
+    "arti": "kartu pos"
+  },
+  {
+    "kanji": null,
+    "hiragana": "はく",
+    "romaji": "haku",
+    "arti": "memakai, memakai celana panjang"
+  },
+  {
+    "kanji": "箱",
+    "hiragana": "はこ",
+    "romaji": "hako",
+    "arti": "kotak"
+  },
+  {
+    "kanji": "橋",
+    "hiragana": "はし",
+    "romaji": "hashi",
+    "arti": "jembatan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "はし",
+    "romaji": "hashi",
+    "arti": "sumpit"
+  },
+  {
+    "kanji": "始まる",
+    "hiragana": "はじまる",
+    "romaji": "hajimaru",
+    "arti": "memulai"
+  },
+  {
+    "kanji": "初め/始め",
+    "hiragana": "はじめ",
+    "romaji": "hajime",
+    "arti": "awal"
+  },
+  {
+    "kanji": "初めて",
+    "hiragana": "はじめて",
+    "romaji": "hajimete",
+    "arti": "untuk pertama kalinya"
+  },
+  {
+    "kanji": "走る",
+    "hiragana": "はしる",
+    "romaji": "hashiru",
+    "arti": "untuk berlari"
+  },
+  {
+    "kanji": null,
+    "hiragana": "バス",
+    "romaji": "basu",
+    "arti": "bis"
+  },
+  {
+    "kanji": null,
+    "hiragana": "バター",
+    "romaji": "bata",
+    "arti": "mentega"
+  },
+  {
+    "kanji": "二十歲",
+    "hiragana": "はたち",
+    "romaji": "hatachi",
+    "arti": "20 tahun, tahun 20"
+  },
+  {
+    "kanji": "働く",
+    "hiragana": "はたらく",
+    "romaji": "hataraku",
+    "arti": "bekerja"
+  },
+  {
+    "kanji": "八",
+    "hiragana": "はち",
+    "romaji": "hachi",
+    "arti": "delapan"
+  },
+  {
+    "kanji": "二十日",
+    "hiragana": "はつか",
+    "romaji": "hatsuka",
+    "arti": "dua puluh hari, dua puluh"
+  },
+  {
+    "kanji": "花",
+    "hiragana": "はな",
+    "romaji": "hana",
+    "arti": "bunga"
+  },
+  {
+    "kanji": "鼻",
+    "hiragana": "はな",
+    "romaji": "hana",
+    "arti": "hidung"
+  },
+  {
+    "kanji": "話",
+    "hiragana": "はなし",
+    "romaji": "hanashi",
+    "arti": "bicara, cerita"
+  },
+  {
+    "kanji": "話す",
+    "hiragana": "はなす",
+    "romaji": "hanasu",
+    "arti": "berbicara"
+  },
+  {
+    "kanji": "早い",
+    "hiragana": "はやい",
+    "romaji": "hayai",
+    "arti": "awal"
+  },
+  {
+    "kanji": "速い",
+    "hiragana": "はやい",
+    "romaji": "hayai",
+    "arti": "cepat"
+  },
+  {
+    "kanji": "春",
+    "hiragana": "はる",
+    "romaji": "haru",
+    "arti": "musim semi"
+  },
+  {
+    "kanji": "貼る",
+    "hiragana": "はる",
+    "romaji": "haru",
+    "arti": "untuk tetap"
+  },
+  {
+    "kanji": "晴れ",
+    "hiragana": "はれ",
+    "romaji": "hare",
+    "arti": "Cuaca cerah"
+  },
+  {
+    "kanji": "晴れる",
+    "hiragana": "はれる",
+    "romaji": "hareru",
+    "arti": "menjadi cerah"
+  },
+  {
+    "kanji": "半",
+    "hiragana": "はん",
+    "romaji": "han",
+    "arti": "setengah"
+  },
+  {
+    "kanji": "晚",
+    "hiragana": "ばん",
+    "romaji": "ban",
+    "arti": "malam"
+  },
+  {
+    "kanji": null,
+    "hiragana": "パン",
+    "romaji": "pan",
+    "arti": "roti"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ハンカチ",
+    "romaji": "hankachi",
+    "arti": "saputangan"
+  },
+  {
+    "kanji": "番号",
+    "hiragana": "ばんごう",
+    "romaji": "bangou",
+    "arti": "jumlah"
+  },
+  {
+    "kanji": "晩御飯",
+    "hiragana": "ばんごはん",
+    "romaji": "bangohan",
+    "arti": "makan malam"
+  },
+  {
+    "kanji": "半分",
+    "hiragana": "はんぶん",
+    "romaji": "hanbun",
+    "arti": "setengah menit"
+  },
+  {
+    "kanji": "東",
+    "hiragana": "ひがし",
+    "romaji": "higashi",
+    "arti": "timur"
+  },
+  {
+    "kanji": "引く",
+    "hiragana": "ひく",
+    "romaji": "hiku",
+    "arti": "untuk menarik"
+  },
+  {
+    "kanji": "弾く",
+    "hiragana": "ひく",
+    "romaji": "hiku",
+    "arti": "memainkan alat musik dengan string"
+  },
+  {
+    "kanji": "低い",
+    "hiragana": "ひくい",
+    "romaji": "hikui",
+    "arti": "pendek, rendah"
+  },
+  {
+    "kanji": "飛行機",
+    "hiragana": "ひこうき",
+    "romaji": "hikouki",
+    "arti": "pesawat terbang"
+  },
+  {
+    "kanji": "左",
+    "hiragana": "ひだり",
+    "romaji": "hidari",
+    "arti": "sisi kiri"
+  },
+  {
+    "kanji": "人",
+    "hiragana": "ひと",
+    "romaji": "hito",
+    "arti": "orang"
+  },
+  {
+    "kanji": "一つ",
+    "hiragana": "ひとつ",
+    "romaji": "hitotsu",
+    "arti": "satu"
+  },
+  {
+    "kanji": "一月",
+    "hiragana": "ひとつき",
+    "romaji": "hitotsuki",
+    "arti": "satu bulan"
+  },
+  {
+    "kanji": "一人",
+    "hiragana": "ひとり",
+    "romaji": "hitori",
+    "arti": "satu orang"
+  },
+  {
+    "kanji": "暇",
+    "hiragana": "ひま",
+    "romaji": "hima",
+    "arti": "waktu luang"
+  },
+  {
+    "kanji": "百",
+    "hiragana": "ひゃく",
+    "romaji": "hyaku",
+    "arti": "ratus"
+  },
+  {
+    "kanji": "病院",
+    "hiragana": "びょういん",
+    "romaji": "byouin",
+    "arti": "RSUD"
+  },
+  {
+    "kanji": "病気",
+    "hiragana": "びょうき",
+    "romaji": "byouki",
+    "arti": "penyakit"
+  },
+  {
+    "kanji": "昼",
+    "hiragana": "ひる",
+    "romaji": "hiru",
+    "arti": "siang, siang hari"
+  },
+  {
+    "kanji": "昼御飯",
+    "hiragana": "ひるごはん",
+    "romaji": "hirugohan",
+    "arti": "tengah hari makan"
+  },
+  {
+    "kanji": "広い",
+    "hiragana": "ひろい",
+    "romaji": "hiroi",
+    "arti": "luas, lebar"
+  },
+  {
+    "kanji": null,
+    "hiragana": "フィルム",
+    "romaji": "firumu",
+    "arti": "gulungan film"
+  },
+  {
+    "kanji": "封筒",
+    "hiragana": "ふうとう",
+    "romaji": "fuutou",
+    "arti": "amplop"
+  },
+  {
+    "kanji": null,
+    "hiragana": "プール",
+    "romaji": "puru",
+    "arti": "kolam renang"
+  },
+  {
+    "kanji": null,
+    "hiragana": "フォーク",
+    "romaji": "foku",
+    "arti": "garpu"
+  },
+  {
+    "kanji": "吹く",
+    "hiragana": "ふく",
+    "romaji": "fuku",
+    "arti": "untuk meniup"
+  },
+  {
+    "kanji": "服",
+    "hiragana": "ふく",
+    "romaji": "fuku",
+    "arti": "pakaian"
+  },
+  {
+    "kanji": "二つ",
+    "hiragana": "ふたつ",
+    "romaji": "futatsu",
+    "arti": "dua"
+  },
+  {
+    "kanji": "豚肉",
+    "hiragana": "ぶたにく",
+    "romaji": "butaniku",
+    "arti": "Babi"
+  },
+  {
+    "kanji": "二人",
+    "hiragana": "ふたり",
+    "romaji": "futari",
+    "arti": "dua orang"
+  },
+  {
+    "kanji": "二日",
+    "hiragana": "ふつか",
+    "romaji": "futsuka",
+    "arti": "dua hari, hari kedua bulan"
+  },
+  {
+    "kanji": "太い",
+    "hiragana": "ふとい",
+    "romaji": "futoi",
+    "arti": "lemak"
+  },
+  {
+    "kanji": "冬",
+    "hiragana": "ふゆ",
+    "romaji": "fuyu",
+    "arti": "musim dingin"
+  },
+  {
+    "kanji": "降る",
+    "hiragana": "ふる",
+    "romaji": "furu",
+    "arti": "jatuh, misalnya hujan atau salju"
+  },
+  {
+    "kanji": "古い",
+    "hiragana": "ふるい",
+    "romaji": "furui",
+    "arti": "lama (tidak digunakan untuk orang-orang)"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ふろ",
+    "romaji": "furo",
+    "arti": "mandi"
+  },
+  {
+    "kanji": "文章",
+    "hiragana": "ぶんしょう",
+    "romaji": "bunshou",
+    "arti": "kalimat, teks"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ページ",
+    "romaji": "peji",
+    "arti": "halaman"
+  },
+  {
+    "kanji": "下手",
+    "hiragana": "へた",
+    "romaji": "heta",
+    "arti": "tidak terampil"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ベッド",
+    "romaji": "beddo",
+    "arti": "tempat tidur"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ペット",
+    "romaji": "petto",
+    "arti": "membelai"
+  },
+  {
+    "kanji": "部屋",
+    "hiragana": "へや",
+    "romaji": "heya",
+    "arti": "kamar"
+  },
+  {
+    "kanji": "辺",
+    "hiragana": "へん",
+    "romaji": "hen",
+    "arti": "daerah"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ペン",
+    "romaji": "pen",
+    "arti": "pena"
+  },
+  {
+    "kanji": "勉強",
+    "hiragana": "べんきょうする",
+    "romaji": "benkyousuru",
+    "arti": "untuk belajar"
+  },
+  {
+    "kanji": "便利",
+    "hiragana": "べんり",
+    "romaji": "benri",
+    "arti": "berguna, nyaman"
+  },
+  {
+    "kanji": "帽子",
+    "hiragana": "ぼうし",
+    "romaji": "boushi",
+    "arti": "topi"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ボールペン",
+    "romaji": "borupen",
+    "arti": "pulpen"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ほか",
+    "romaji": "hoka",
+    "arti": "lainnya, sisanya"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ポケット",
+    "romaji": "poketto",
+    "arti": "saku"
+  },
+  {
+    "kanji": "欲しい",
+    "hiragana": "ほしい",
+    "romaji": "hoshii",
+    "arti": "ingin"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ポスト",
+    "romaji": "posuto",
+    "arti": "pos"
+  },
+  {
+    "kanji": "細い",
+    "hiragana": "ほそい",
+    "romaji": "hosoi",
+    "arti": "tipis"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ボタン",
+    "romaji": "botan",
+    "arti": "tombol"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ホテル",
+    "romaji": "hoteru",
+    "arti": "hotel"
+  },
+  {
+    "kanji": "本",
+    "hiragana": "ほん",
+    "romaji": "hon",
+    "arti": "Book"
+  },
+  {
+    "kanji": "本棚",
+    "hiragana": "ほんだな",
+    "romaji": "hondana",
+    "arti": "rak buku"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ほんとう",
+    "romaji": "hontou",
+    "arti": "kebenaran"
+  },
+  {
+    "kanji": "毎朝",
+    "hiragana": "まいあさ",
+    "romaji": "maiasa",
+    "arti": "setiap pagi"
+  },
+  {
+    "kanji": "毎月",
+    "hiragana": "まいげつ/まいつき",
+    "romaji": "maigetsu/maitsuki",
+    "arti": "setiap bulan"
+  },
+  {
+    "kanji": "毎週",
+    "hiragana": "まいしゅう",
+    "romaji": "maishuu",
+    "arti": "setiap minggu"
+  },
+  {
+    "kanji": "毎日",
+    "hiragana": "まいにち",
+    "romaji": "mainichi",
+    "arti": "setiap hari"
+  },
+  {
+    "kanji": "毎年",
+    "hiragana": "まいねん/まいとし",
+    "romaji": "mainen/maitoshi",
+    "arti": "setiap tahun"
+  },
+  {
+    "kanji": "每晚",
+    "hiragana": "まいばん",
+    "romaji": "maiban",
+    "arti": "setiap malam"
+  },
+  {
+    "kanji": "前",
+    "hiragana": "まえ",
+    "romaji": "mae",
+    "arti": "sebelum"
+  },
+  {
+    "kanji": "曲る",
+    "hiragana": "まがる",
+    "romaji": "magaru",
+    "arti": "untuk mengubah, membengkokkan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "まずい",
+    "romaji": "mazui",
+    "arti": "menyenangkan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "また",
+    "romaji": "mata",
+    "arti": "lagi, dan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "まだ",
+    "romaji": "mada",
+    "arti": "namun, masih"
+  },
+  {
+    "kanji": "町",
+    "hiragana": "まち",
+    "romaji": "machi",
+    "arti": "kota, kota"
+  },
+  {
+    "kanji": "待つ",
+    "hiragana": "まつ",
+    "romaji": "matsu",
+    "arti": "menunggu"
+  },
+  {
+    "kanji": null,
+    "hiragana": "まっすぐ",
+    "romaji": "massugu",
+    "arti": "lurus ke depan, langsung"
+  },
+  {
+    "kanji": null,
+    "hiragana": "マッチ",
+    "romaji": "macchi",
+    "arti": "pertandingan"
+  },
+  {
+    "kanji": "窓",
+    "hiragana": "まど",
+    "romaji": "mado",
+    "arti": "jendela"
+  },
+  {
+    "kanji": "丸い/円い",
+    "hiragana": "まるい",
+    "romaji": "marui",
+    "arti": "bulat, melingkar"
+  },
+  {
+    "kanji": "万",
+    "hiragana": "まん",
+    "romaji": "man",
+    "arti": "sepuluh ribu"
+  },
+  {
+    "kanji": "万年筆",
+    "hiragana": "まんねんひつ",
+    "romaji": "mannenhitsu",
+    "arti": "pulpen"
+  },
+  {
+    "kanji": "磨く",
+    "hiragana": "みがく",
+    "romaji": "migaku",
+    "arti": "untuk sikat gigi, memoles"
+  },
+  {
+    "kanji": "右",
+    "hiragana": "みぎ",
+    "romaji": "migi",
+    "arti": "sisi kanan"
+  },
+  {
+    "kanji": "短い",
+    "hiragana": "みじかい",
+    "romaji": "mijikai",
+    "arti": "pendek"
+  },
+  {
+    "kanji": "水",
+    "hiragana": "みず",
+    "romaji": "mizu",
+    "arti": "air"
+  },
+  {
+    "kanji": "店",
+    "hiragana": "みせ",
+    "romaji": "mise",
+    "arti": "toko"
+  },
+  {
+    "kanji": "見せる",
+    "hiragana": "みせる",
+    "romaji": "miseru",
+    "arti": "memperlihatkan"
+  },
+  {
+    "kanji": "道",
+    "hiragana": "みち",
+    "romaji": "michi",
+    "arti": "jalan"
+  },
+  {
+    "kanji": "三日",
+    "hiragana": "みっか",
+    "romaji": "mikka",
+    "arti": "tiga hari, hari ketiga bulan"
+  },
+  {
+    "kanji": "三つ",
+    "hiragana": "みっつ",
+    "romaji": "mittsu",
+    "arti": "tiga"
+  },
+  {
+    "kanji": "緑",
+    "hiragana": "みどり",
+    "romaji": "midori",
+    "arti": "hijau"
+  },
+  {
+    "kanji": "皆さん",
+    "hiragana": "みなさん",
+    "romaji": "minasan",
+    "arti": "semua orang"
+  },
+  {
+    "kanji": "南",
+    "hiragana": "みなみ",
+    "romaji": "minami",
+    "arti": "Selatan"
+  },
+  {
+    "kanji": "耳",
+    "hiragana": "みみ",
+    "romaji": "mimi",
+    "arti": "telinga"
+  },
+  {
+    "kanji": "見る観る",
+    "hiragana": "みる",
+    "romaji": "miru",
+    "arti": "untuk melihat, untuk menonton"
+  },
+  {
+    "kanji": null,
+    "hiragana": "みんな",
+    "romaji": "minna",
+    "arti": "semua orang"
+  },
+  {
+    "kanji": "六日",
+    "hiragana": "むいか",
+    "romaji": "muika",
+    "arti": "enam hari, hari keenam bulan"
+  },
+  {
+    "kanji": "向こう",
+    "hiragana": "むこう",
+    "romaji": "mukou",
+    "arti": "di sana"
+  },
+  {
+    "kanji": "難しい",
+    "hiragana": "むずかしい",
+    "romaji": "muzukashii",
+    "arti": "sulit"
+  },
+  {
+    "kanji": "六つ",
+    "hiragana": "むっつ",
+    "romaji": "muttsu",
+    "arti": "enam"
+  },
+  {
+    "kanji": "村",
+    "hiragana": "むら",
+    "romaji": "mura",
+    "arti": "Desa"
+  },
+  {
+    "kanji": "目",
+    "hiragana": "め",
+    "romaji": "me",
+    "arti": "mata"
+  },
+  {
+    "kanji": null,
+    "hiragana": "メートル",
+    "romaji": "metoru",
+    "arti": "meter"
+  },
+  {
+    "kanji": "眼鏡",
+    "hiragana": "めがね",
+    "romaji": "megane",
+    "arti": "kacamata"
+  },
+  {
+    "kanji": null,
+    "hiragana": "もう",
+    "romaji": "mou",
+    "arti": "sudah"
+  },
+  {
+    "kanji": "もう一度",
+    "hiragana": "もういちど",
+    "romaji": "mouichido",
+    "arti": "lagi"
+  },
+  {
+    "kanji": "木曜日",
+    "hiragana": "もくようび",
+    "romaji": "mokuyoubi",
+    "arti": "Kamis"
+  },
+  {
+    "kanji": "持つ",
+    "hiragana": "もつ",
+    "romaji": "motsu",
+    "arti": "untuk mengadakan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "もっと",
+    "romaji": "motto",
+    "arti": "lebih"
+  },
+  {
+    "kanji": "物",
+    "hiragana": "もの",
+    "romaji": "mono",
+    "arti": "benda"
+  },
+  {
+    "kanji": "門",
+    "hiragana": "もん",
+    "romaji": "mon",
+    "arti": "gerbang"
+  },
+  {
+    "kanji": "問題",
+    "hiragana": "もんだい",
+    "romaji": "mondai",
+    "arti": "masalah"
+  },
+  {
+    "kanji": "八百屋",
+    "hiragana": "やおや",
+    "romaji": "yaoya",
+    "arti": "penjual sayur"
+  },
+  {
+    "kanji": "野菜",
+    "hiragana": "やさい",
+    "romaji": "yasai",
+    "arti": "sayur-mayur"
+  },
+  {
+    "kanji": "易しい",
+    "hiragana": "やさしい",
+    "romaji": "yasashii",
+    "arti": "mudah, sederhana"
+  },
+  {
+    "kanji": "安い",
+    "hiragana": "やすい",
+    "romaji": "yasui",
+    "arti": "murah"
+  },
+  {
+    "kanji": "休み",
+    "hiragana": "やすみ",
+    "romaji": "yasumi",
+    "arti": "Sisanya, liburan"
+  },
+  {
+    "kanji": "休む",
+    "hiragana": "やすむ",
+    "romaji": "yasumu",
+    "arti": "beristirahat"
+  },
+  {
+    "kanji": "八つ",
+    "hiragana": "やっつ",
+    "romaji": "yattsu",
+    "arti": "delapan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "やま",
+    "romaji": "yama",
+    "arti": "gunung"
+  },
+  {
+    "kanji": null,
+    "hiragana": "やる",
+    "romaji": "yaru",
+    "arti": "melakukan"
+  },
+  {
+    "kanji": "夕方",
+    "hiragana": "ゆうがた",
+    "romaji": "yuugata",
+    "arti": "malam"
+  },
+  {
+    "kanji": "夕飯",
+    "hiragana": "ゆうはん",
+    "romaji": "yuuhan",
+    "arti": "makan dinner"
+  },
+  {
+    "kanji": "郵便局",
+    "hiragana": "ゆうびんきょく",
+    "romaji": "yuubinkyoku",
+    "arti": "kantor Pos"
+  },
+  {
+    "kanji": "昨夜",
+    "hiragana": "ゆうべ",
+    "romaji": "yuube",
+    "arti": "Tadi malam"
+  },
+  {
+    "kanji": "有名",
+    "hiragana": "ゆうめい",
+    "romaji": "yuumei",
+    "arti": "terkenal"
+  },
+  {
+    "kanji": "雪",
+    "hiragana": "ゆき",
+    "romaji": "yuki",
+    "arti": "salju"
+  },
+  {
+    "kanji": "行く",
+    "hiragana": "ゆく",
+    "romaji": "yuku",
+    "arti": "untuk pergi"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ゆっくりと",
+    "romaji": "yukkurito",
+    "arti": "pelan-pelan"
+  },
+  {
+    "kanji": "八日",
+    "hiragana": "ようか",
+    "romaji": "youka",
+    "arti": "delapan hari, hari kedelapan bulan"
+  },
+  {
+    "kanji": "洋服",
+    "hiragana": "ようふく",
+    "romaji": "youfuku",
+    "arti": "pakaian gaya barat"
+  },
+  {
+    "kanji": null,
+    "hiragana": "よく",
+    "romaji": "yoku",
+    "arti": "sering, baik"
+  },
+  {
+    "kanji": "横",
+    "hiragana": "よこ",
+    "romaji": "yoko",
+    "arti": "samping, sisi, lebar"
+  },
+  {
+    "kanji": "四日",
+    "hiragana": "よっか",
+    "romaji": "yokka",
+    "arti": "empat hari, hari fouth bulan"
+  },
+  {
+    "kanji": "四つ",
+    "hiragana": "よっつ",
+    "romaji": "yottsu",
+    "arti": "empat"
+  },
+  {
+    "kanji": "呼ぶ",
+    "hiragana": "よぶ",
+    "romaji": "yobu",
+    "arti": "untuk memanggil, mengundang"
+  },
+  {
+    "kanji": "読む",
+    "hiragana": "よむ",
+    "romaji": "yomu",
+    "arti": "untuk membaca"
+  },
+  {
+    "kanji": "夜",
+    "hiragana": "よる",
+    "romaji": "yoru",
+    "arti": "malam, malam"
+  },
+  {
+    "kanji": "弱い",
+    "hiragana": "よわい",
+    "romaji": "yowai",
+    "arti": "lemah"
+  },
+  {
+    "kanji": "来月",
+    "hiragana": "らいげつ",
+    "romaji": "raigetsu",
+    "arti": "bulan depan"
+  },
+  {
+    "kanji": "来週",
+    "hiragana": "らいしゅう",
+    "romaji": "raishuu",
+    "arti": "minggu depan"
+  },
+  {
+    "kanji": "来年",
+    "hiragana": "らいねん",
+    "romaji": "rainen",
+    "arti": "tahun depan"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ラジオ",
+    "romaji": "rajio",
+    "arti": "radio"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ラジカセ/ラジオカセット",
+    "romaji": "rajikase/rajiokasetto",
+    "arti": "pemutar kaset radio"
+  },
+  {
+    "kanji": null,
+    "hiragana": "りっぱ",
+    "romaji": "rippa",
+    "arti": "megah"
+  },
+  {
+    "kanji": "留学生",
+    "hiragana": "りゅうがくせい",
+    "romaji": "ryuugakusei",
+    "arti": "mahasiswa luar negeri"
+  },
+  {
+    "kanji": "両親",
+    "hiragana": "りょうしん",
+    "romaji": "ryoushin",
+    "arti": "kedua orang tua"
+  },
+  {
+    "kanji": "料理",
+    "hiragana": "りょうり",
+    "romaji": "ryouri",
+    "arti": "Masakan"
+  },
+  {
+    "kanji": "旅行",
+    "hiragana": "りょこう",
+    "romaji": "ryokou",
+    "arti": "perjalanan"
+  },
+  {
+    "kanji": "零",
+    "hiragana": "れい",
+    "romaji": "rei",
+    "arti": "nol"
+  },
+  {
+    "kanji": "冷蔵庫",
+    "hiragana": "れいぞうこ",
+    "romaji": "reizouko",
+    "arti": "kulkas"
+  },
+  {
+    "kanji": null,
+    "hiragana": "レコード",
+    "romaji": "rekodo",
+    "arti": "merekam"
+  },
+  {
+    "kanji": null,
+    "hiragana": "レストラン",
+    "romaji": "resutoran",
+    "arti": "restoran"
+  },
+  {
+    "kanji": "練習",
+    "hiragana": "れんしゅうする",
+    "romaji": "renshuusuru",
+    "arti": "berlatih"
+  },
+  {
+    "kanji": "廊下",
+    "hiragana": "ろうか",
+    "romaji": "rouka",
+    "arti": "koridor"
+  },
+  {
+    "kanji": "六",
+    "hiragana": "ろく",
+    "romaji": "roku",
+    "arti": "enam"
+  },
+  {
+    "kanji": null,
+    "hiragana": "ワイシャツ",
+    "romaji": "waishatsu",
+    "arti": "kemeja bisnis"
+  },
+  {
+    "kanji": "若い",
+    "hiragana": "わかい",
+    "romaji": "wakai",
+    "arti": "muda"
+  },
+  {
+    "kanji": "分かる",
+    "hiragana": "わかる",
+    "romaji": "wakaru",
+    "arti": "dipahami"
+  },
+  {
+    "kanji": "忘れる",
+    "hiragana": "わすれる",
+    "romaji": "wasureru",
+    "arti": "untuk dilupakan"
+  },
+  {
+    "kanji": "私",
+    "hiragana": "わたくし",
+    "romaji": "watakushi",
+    "arti": "(rendah hati) Saya sendiri"
+  },
+  {
+    "kanji": "私",
+    "hiragana": "わたし",
+    "romaji": "watashi",
+    "arti": "Saya sendiri"
+  },
+  {
+    "kanji": "渡す",
+    "hiragana": "わたす",
+    "romaji": "watasu",
+    "arti": "menyerahkan"
+  },
+  {
+    "kanji": "渡る",
+    "hiragana": "わたる",
+    "romaji": "wataru",
+    "arti": "pergi di"
+  },
+  {
+    "kanji": "悪い",
+    "hiragana": "わるい",
+    "romaji": "warui",
+    "arti": "buruk"
+  },
+  {
+    "kanji": null,
+    "hiragana": "より、ほう",
+    "romaji": "yori,hou",
+    "arti": "Digunakan untuk perbandingan."
+  }
+]
